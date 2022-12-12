@@ -49,8 +49,7 @@
     "generate": "stencil generate",
     "transform-tokens": "node ./src/design-tokens/config/transform-tokens.js",
     "prebuild-storybook": "stencil build --docs",
-    "build-storybook": "storybook build",
-    "postbuild-storybook": "storybook dev"
+    "build-storybook": "storybook build"
   },
   "repository": {
     "type": "git",
