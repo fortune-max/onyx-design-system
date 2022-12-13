@@ -33,6 +33,8 @@ flow capabilities for all its children components and elements.
  - [hs-radio](../hs-radio-group)
  - [hs-radio-group](../hs-radio-group)
  - [hs-tab-list](../hs-tabs)
+ - [onyx-checkbox](../onyx-checkbox-group)
+ - [onyx-checkbox-group](../onyx-checkbox-group)
 
 ### Graph
 ```mermaid
@@ -40,6 +42,8 @@ graph TD;
   hs-radio --> hs-stack
   hs-radio-group --> hs-stack
   hs-tab-list --> hs-stack
+  onyx-checkbox --> hs-stack
+  onyx-checkbox-group --> hs-stack
   style hs-stack fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

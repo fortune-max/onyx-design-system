@@ -75,6 +75,32 @@ export namespace Components {
          */
         "selectedIndex": number;
     }
+    interface OnyxCheckbox {
+        /**
+          * The unique name of the checkbox group. Must match the `name` attribute of its parent `<onyx-checkbox-group />`.
+         */
+        "name": any;
+        /**
+          * The particular value of this checkbox item.
+         */
+        "value": any;
+    }
+    interface OnyxCheckboxGroup {
+        /**
+          * Unique name to group these options under. Child check boxes must feature the same `name` attribute value.
+         */
+        "name": any;
+        /**
+          * Determines if the check boxes will display stacked vertically or horizontally. See {@link Orientation}
+         */
+        "orientation": Orientation;
+        /**
+          * Default selected value, which will check the matching checkbox element(s).
+         */
+        "selectedValues": any;
+    }
+    interface OnyxStack {
+    }
 }
 export interface HsButtonCustomEvent<T> extends CustomEvent<T> {
     detail: T;
@@ -157,6 +183,24 @@ declare global {
         prototype: HTMLHsTabsElement;
         new (): HTMLHsTabsElement;
     };
+    interface HTMLOnyxCheckboxElement extends Components.OnyxCheckbox, HTMLStencilElement {
+    }
+    var HTMLOnyxCheckboxElement: {
+        prototype: HTMLOnyxCheckboxElement;
+        new (): HTMLOnyxCheckboxElement;
+    };
+    interface HTMLOnyxCheckboxGroupElement extends Components.OnyxCheckboxGroup, HTMLStencilElement {
+    }
+    var HTMLOnyxCheckboxGroupElement: {
+        prototype: HTMLOnyxCheckboxGroupElement;
+        new (): HTMLOnyxCheckboxGroupElement;
+    };
+    interface HTMLOnyxStackElement extends Components.OnyxStack, HTMLStencilElement {
+    }
+    var HTMLOnyxStackElement: {
+        prototype: HTMLOnyxStackElement;
+        new (): HTMLOnyxStackElement;
+    };
     interface HTMLElementTagNameMap {
         "hs-button": HTMLHsButtonElement;
         "hs-grid": HTMLHsGridElement;
@@ -170,6 +214,9 @@ declare global {
         "hs-tab-panel": HTMLHsTabPanelElement;
         "hs-tab-panels": HTMLHsTabPanelsElement;
         "hs-tabs": HTMLHsTabsElement;
+        "onyx-checkbox": HTMLOnyxCheckboxElement;
+        "onyx-checkbox-group": HTMLOnyxCheckboxGroupElement;
+        "onyx-stack": HTMLOnyxStackElement;
     }
 }
 declare namespace LocalJSX {
@@ -242,6 +289,32 @@ declare namespace LocalJSX {
          */
         "selectedIndex"?: number;
     }
+    interface OnyxCheckbox {
+        /**
+          * The unique name of the checkbox group. Must match the `name` attribute of its parent `<onyx-checkbox-group />`.
+         */
+        "name"?: any;
+        /**
+          * The particular value of this checkbox item.
+         */
+        "value"?: any;
+    }
+    interface OnyxCheckboxGroup {
+        /**
+          * Unique name to group these options under. Child check boxes must feature the same `name` attribute value.
+         */
+        "name"?: any;
+        /**
+          * Determines if the check boxes will display stacked vertically or horizontally. See {@link Orientation}
+         */
+        "orientation"?: Orientation;
+        /**
+          * Default selected value, which will check the matching checkbox element(s).
+         */
+        "selectedValues"?: any;
+    }
+    interface OnyxStack {
+    }
     interface IntrinsicElements {
         "hs-button": HsButton;
         "hs-grid": HsGrid;
@@ -255,6 +328,9 @@ declare namespace LocalJSX {
         "hs-tab-panel": HsTabPanel;
         "hs-tab-panels": HsTabPanels;
         "hs-tabs": HsTabs;
+        "onyx-checkbox": OnyxCheckbox;
+        "onyx-checkbox-group": OnyxCheckboxGroup;
+        "onyx-stack": OnyxStack;
     }
 }
 export { LocalJSX as JSX };
@@ -273,6 +349,9 @@ declare module "@stencil/core" {
             "hs-tab-panel": LocalJSX.HsTabPanel & JSXBase.HTMLAttributes<HTMLHsTabPanelElement>;
             "hs-tab-panels": LocalJSX.HsTabPanels & JSXBase.HTMLAttributes<HTMLHsTabPanelsElement>;
             "hs-tabs": LocalJSX.HsTabs & JSXBase.HTMLAttributes<HTMLHsTabsElement>;
+            "onyx-checkbox": LocalJSX.OnyxCheckbox & JSXBase.HTMLAttributes<HTMLOnyxCheckboxElement>;
+            "onyx-checkbox-group": LocalJSX.OnyxCheckboxGroup & JSXBase.HTMLAttributes<HTMLOnyxCheckboxGroupElement>;
+            "onyx-stack": LocalJSX.OnyxStack & JSXBase.HTMLAttributes<HTMLOnyxStackElement>;
         }
     }
 }
