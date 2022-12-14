@@ -1,4 +1,4 @@
-# hs-stack
+# onyx-stack
 
 
 
@@ -7,15 +7,15 @@
 
 ## Overview
 
-The `<hs-stack>` component is a layout component providing horizontal and vertical
+The `<onyx-stack>` component is a layout component providing horizontal and vertical
 flow capabilities for all its children components and elements.
 
 ### Example
 ```html
-<hs-stack orientation="vertical" gap="small">
+<onyx-stack orientation="vertical" gap="small">
  <img src="test.png" />
  <button>Save</button>
-</hs-stack>
+</onyx-stack>
 ```
 
 ## Properties
@@ -30,17 +30,19 @@ flow capabilities for all its children components and elements.
 
 ### Used by
 
- - [hs-radio](../hs-radio-group)
- - [hs-radio-group](../hs-radio-group)
- - [hs-tab-list](../hs-tabs)
+ - [onyx-checkbox](../onyx-checkbox-group)
+ - [onyx-checkbox-group](../onyx-checkbox-group)
+ - [onyx-radio](../onyx-radio-group)
+ - [onyx-radio-group](../onyx-radio-group)
 
 ### Graph
 ```mermaid
 graph TD;
-  hs-radio --> hs-stack
-  hs-radio-group --> hs-stack
-  hs-tab-list --> hs-stack
-  style hs-stack fill:#f9f,stroke:#333,stroke-width:4px
+  onyx-checkbox --> onyx-stack
+  onyx-checkbox-group --> onyx-stack
+  onyx-radio --> onyx-stack
+  onyx-radio-group --> onyx-stack
+  style onyx-stack fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------

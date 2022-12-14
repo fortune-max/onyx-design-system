@@ -38,7 +38,7 @@ export class OnyxCheckbox {
     return (
       <Host>
         <label>
-          <hs-stack orientation="horizontal">
+          <onyx-stack orientation="horizontal">
             <input
               type="checkbox"
               value={this.value}
@@ -47,7 +47,7 @@ export class OnyxCheckbox {
               checked={checkboxGroupStore.checkboxGroups[this.name].selectedValues.includes(this.value)}
             />
             <slot />
-          </hs-stack>
+          </onyx-stack>
         </label>
       </Host>
     );

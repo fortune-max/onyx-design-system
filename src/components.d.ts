@@ -99,7 +99,39 @@ export namespace Components {
          */
         "selectedValues": any;
     }
+    interface OnyxRadio {
+        /**
+          * The unique name of the radio button group. Must match the `name` attribute of its parent `<onyx-radio-group />`.
+         */
+        "name": any;
+        /**
+          * The particular value of this radio input item.
+         */
+        "value": any;
+    }
+    interface OnyxRadioGroup {
+        /**
+          * Unique name to group these options under. Child radio inputs must feature the same `name` attribute value.
+         */
+        "name": any;
+        /**
+          * Based in the `Orientation` ambient type, will display the radio group stacked vertically or horizontally. See {@link Orientation}
+         */
+        "orientation": Orientation;
+        /**
+          * Default value, which will preselect the matching radio element.
+         */
+        "selectedValue": any;
+    }
     interface OnyxStack {
+        /**
+          * The `gap` property sets the spacing in between elements, and has no effect in the leading or trailing element.
+         */
+        "gap": 'large' | 'small';
+        /**
+          * The `orientation` property sets the direction for the flow, either vertical or horizontal.
+         */
+        "orientation": Orientation;
     }
 }
 export interface HsButtonCustomEvent<T> extends CustomEvent<T> {
@@ -195,6 +227,18 @@ declare global {
         prototype: HTMLOnyxCheckboxGroupElement;
         new (): HTMLOnyxCheckboxGroupElement;
     };
+    interface HTMLOnyxRadioElement extends Components.OnyxRadio, HTMLStencilElement {
+    }
+    var HTMLOnyxRadioElement: {
+        prototype: HTMLOnyxRadioElement;
+        new (): HTMLOnyxRadioElement;
+    };
+    interface HTMLOnyxRadioGroupElement extends Components.OnyxRadioGroup, HTMLStencilElement {
+    }
+    var HTMLOnyxRadioGroupElement: {
+        prototype: HTMLOnyxRadioGroupElement;
+        new (): HTMLOnyxRadioGroupElement;
+    };
     interface HTMLOnyxStackElement extends Components.OnyxStack, HTMLStencilElement {
     }
     var HTMLOnyxStackElement: {
@@ -216,6 +260,8 @@ declare global {
         "hs-tabs": HTMLHsTabsElement;
         "onyx-checkbox": HTMLOnyxCheckboxElement;
         "onyx-checkbox-group": HTMLOnyxCheckboxGroupElement;
+        "onyx-radio": HTMLOnyxRadioElement;
+        "onyx-radio-group": HTMLOnyxRadioGroupElement;
         "onyx-stack": HTMLOnyxStackElement;
     }
 }
@@ -313,7 +359,39 @@ declare namespace LocalJSX {
          */
         "selectedValues"?: any;
     }
+    interface OnyxRadio {
+        /**
+          * The unique name of the radio button group. Must match the `name` attribute of its parent `<onyx-radio-group />`.
+         */
+        "name"?: any;
+        /**
+          * The particular value of this radio input item.
+         */
+        "value"?: any;
+    }
+    interface OnyxRadioGroup {
+        /**
+          * Unique name to group these options under. Child radio inputs must feature the same `name` attribute value.
+         */
+        "name"?: any;
+        /**
+          * Based in the `Orientation` ambient type, will display the radio group stacked vertically or horizontally. See {@link Orientation}
+         */
+        "orientation"?: Orientation;
+        /**
+          * Default value, which will preselect the matching radio element.
+         */
+        "selectedValue"?: any;
+    }
     interface OnyxStack {
+        /**
+          * The `gap` property sets the spacing in between elements, and has no effect in the leading or trailing element.
+         */
+        "gap"?: 'large' | 'small';
+        /**
+          * The `orientation` property sets the direction for the flow, either vertical or horizontal.
+         */
+        "orientation"?: Orientation;
     }
     interface IntrinsicElements {
         "hs-button": HsButton;
@@ -330,6 +408,8 @@ declare namespace LocalJSX {
         "hs-tabs": HsTabs;
         "onyx-checkbox": OnyxCheckbox;
         "onyx-checkbox-group": OnyxCheckboxGroup;
+        "onyx-radio": OnyxRadio;
+        "onyx-radio-group": OnyxRadioGroup;
         "onyx-stack": OnyxStack;
     }
 }
@@ -351,6 +431,8 @@ declare module "@stencil/core" {
             "hs-tabs": LocalJSX.HsTabs & JSXBase.HTMLAttributes<HTMLHsTabsElement>;
             "onyx-checkbox": LocalJSX.OnyxCheckbox & JSXBase.HTMLAttributes<HTMLOnyxCheckboxElement>;
             "onyx-checkbox-group": LocalJSX.OnyxCheckboxGroup & JSXBase.HTMLAttributes<HTMLOnyxCheckboxGroupElement>;
+            "onyx-radio": LocalJSX.OnyxRadio & JSXBase.HTMLAttributes<HTMLOnyxRadioElement>;
+            "onyx-radio-group": LocalJSX.OnyxRadioGroup & JSXBase.HTMLAttributes<HTMLOnyxRadioGroupElement>;
             "onyx-stack": LocalJSX.OnyxStack & JSXBase.HTMLAttributes<HTMLOnyxStackElement>;
         }
     }

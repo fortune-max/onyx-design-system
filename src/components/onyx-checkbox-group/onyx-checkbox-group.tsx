@@ -58,9 +58,9 @@ export class OnyxCheckboxGroup {
   render() {
     return (
       <Host>
-        <hs-stack orientation={this.orientation}>
+        <onyx-stack orientation={this.orientation}>
           <slot></slot>
-        </hs-stack>
+        </onyx-stack>
       </Host>
     );
   }

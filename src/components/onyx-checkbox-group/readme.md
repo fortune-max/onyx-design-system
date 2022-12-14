@@ -18,12 +18,12 @@
 
 ### Depends on
 
-- [hs-stack](../hs-stack)
+- [onyx-stack](../onyx-stack)
 
 ### Graph
 ```mermaid
 graph TD;
-  onyx-checkbox-group --> hs-stack
+  onyx-checkbox-group --> onyx-stack
   style onyx-checkbox-group fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
