@@ -30,19 +30,19 @@ const ariaAttributes = [
  * components in our Design System.
  * ### Example:
  * ```html
- * <hs-heading level="1" text-align="center">Section name</hs-heading>
+ * <onyx-heading level="1" text-align="center">Section name</onyx-heading>
  * ```
  */
 @Component({
   // The component decorator object payload is documented at https://stenciljs.com/docs/component
-  tag: 'hs-header',
-  styleUrl: 'hs-header.css',
+  tag: 'onyx-header',
+  styleUrl: 'onyx-header.css',
   shadow: false,
   scoped: true,
 })
-export class HsHeader {
+export class OnyxHeader {
   /**
-   * A reference to the host element. This is, the actual <hs-header /> tag
+   * A reference to the host element. This is, the actual <onyx-header /> tag
    * that wraps the HTML output of this component.
    */
   @Element()
@@ -88,7 +88,7 @@ export class HsHeader {
      * later on "in the wild".
      */
     if (this.level < 1 || this.level > 6) {
-      throw new Error("HsHeader: the level property must be between 1 and 6");
+      throw new Error("OnyxHeader: the level property must be between 1 and 6");
     }
 
     /**

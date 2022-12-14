@@ -18,9 +18,9 @@ export default {
 };
 
 const Template = (args) => `
-  <hs-header level="4">
+  <onyx-header level="4">
     Which services would you like to be included in your room booking?
-  </hs-header>
+  </onyx-header>
   <onyx-checkbox-group name="room" selected-values="${args.selectedValues}" orientation="${args.orientation}">
     <onyx-checkbox name="room" value="1">Room Service</onyx-checkbox>
     <onyx-checkbox name="room" value="2">Wake-up Call</onyx-checkbox>

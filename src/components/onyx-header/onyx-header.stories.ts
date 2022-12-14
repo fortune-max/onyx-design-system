@@ -37,9 +37,9 @@ export default {
  * can later on customize with different values for its attribute properties and events
  */
 const Template = (args) => `
-  <hs-header level="${args.level}" text-align="${args.textAlign}">
+  <onyx-header level="${args.level}" text-align="${args.textAlign}">
     ${args.text}
-  </hs-header>
+  </onyx-header>
 `;
 
 /**

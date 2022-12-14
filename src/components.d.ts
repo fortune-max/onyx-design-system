@@ -11,16 +11,6 @@ export namespace Components {
     }
     interface HsGridColumn {
     }
-    interface HsHeader {
-        /**
-          * The `level` property allows users to indicate what header hierarchy this element is. It mus take a number from `1` to `6`.
-         */
-        "level": number;
-        /**
-          * Provides support for implementing horizontal alignment to the text contained in the header.
-         */
-        "textAlign": 'left' | 'right' | 'center';
-    }
     interface HsTab {
         "toggleSelected": (selected: boolean) => Promise<void>;
     }
@@ -66,6 +56,14 @@ export namespace Components {
         "selectedValues": any;
     }
     interface OnyxHeader {
+        /**
+          * The `level` property allows users to indicate what header hierarchy this element is. It mus take a number from `1` to `6`.
+         */
+        "level": number;
+        /**
+          * Provides support for implementing horizontal alignment to the text contained in the header.
+         */
+        "textAlign": 'left' | 'right' | 'center';
     }
     interface OnyxRadio {
         /**
@@ -122,12 +120,6 @@ declare global {
     var HTMLHsGridColumnElement: {
         prototype: HTMLHsGridColumnElement;
         new (): HTMLHsGridColumnElement;
-    };
-    interface HTMLHsHeaderElement extends Components.HsHeader, HTMLStencilElement {
-    }
-    var HTMLHsHeaderElement: {
-        prototype: HTMLHsHeaderElement;
-        new (): HTMLHsHeaderElement;
     };
     interface HTMLHsTabElement extends Components.HsTab, HTMLStencilElement {
     }
@@ -204,7 +196,6 @@ declare global {
     interface HTMLElementTagNameMap {
         "hs-grid": HTMLHsGridElement;
         "hs-grid-column": HTMLHsGridColumnElement;
-        "hs-header": HTMLHsHeaderElement;
         "hs-tab": HTMLHsTabElement;
         "hs-tab-list": HTMLHsTabListElement;
         "hs-tab-panel": HTMLHsTabPanelElement;
@@ -224,16 +215,6 @@ declare namespace LocalJSX {
         "columns"?: number;
     }
     interface HsGridColumn {
-    }
-    interface HsHeader {
-        /**
-          * The `level` property allows users to indicate what header hierarchy this element is. It mus take a number from `1` to `6`.
-         */
-        "level"?: number;
-        /**
-          * Provides support for implementing horizontal alignment to the text contained in the header.
-         */
-        "textAlign"?: 'left' | 'right' | 'center';
     }
     interface HsTab {
         "onTabClick"?: (event: HsTabCustomEvent<any>) => void;
@@ -280,6 +261,14 @@ declare namespace LocalJSX {
         "selectedValues"?: any;
     }
     interface OnyxHeader {
+        /**
+          * The `level` property allows users to indicate what header hierarchy this element is. It mus take a number from `1` to `6`.
+         */
+        "level"?: number;
+        /**
+          * Provides support for implementing horizontal alignment to the text contained in the header.
+         */
+        "textAlign"?: 'left' | 'right' | 'center';
     }
     interface OnyxRadio {
         /**
@@ -318,7 +307,6 @@ declare namespace LocalJSX {
     interface IntrinsicElements {
         "hs-grid": HsGrid;
         "hs-grid-column": HsGridColumn;
-        "hs-header": HsHeader;
         "hs-tab": HsTab;
         "hs-tab-list": HsTabList;
         "hs-tab-panel": HsTabPanel;
@@ -339,7 +327,6 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "hs-grid": LocalJSX.HsGrid & JSXBase.HTMLAttributes<HTMLHsGridElement>;
             "hs-grid-column": LocalJSX.HsGridColumn & JSXBase.HTMLAttributes<HTMLHsGridColumnElement>;
-            "hs-header": LocalJSX.HsHeader & JSXBase.HTMLAttributes<HTMLHsHeaderElement>;
             "hs-tab": LocalJSX.HsTab & JSXBase.HTMLAttributes<HTMLHsTabElement>;
             "hs-tab-list": LocalJSX.HsTabList & JSXBase.HTMLAttributes<HTMLHsTabListElement>;
             "hs-tab-panel": LocalJSX.HsTabPanel & JSXBase.HTMLAttributes<HTMLHsTabPanelElement>;

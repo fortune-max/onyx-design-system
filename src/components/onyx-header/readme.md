@@ -1,4 +1,4 @@
-# hs-header
+# onyx-header
 
 
 
@@ -12,7 +12,7 @@ Its convenience for pointing out document sections makes it one of the most cons
 components in our Design System.
 ### Example:
 ```html
-<hs-heading level="1" text-align="center">Section name</hs-heading>
+<onyx-heading level="1" text-align="center">Section name</onyx-heading>
 ```
 
 ## Properties

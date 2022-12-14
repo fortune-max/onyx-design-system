@@ -20,9 +20,9 @@ export default {
 };
 
 const Template = (args) => `
-  <hs-header level="4">
+  <onyx-header level="4">
     How long will you be staying with us?
-  </hs-header>
+  </onyx-header>
   <onyx-radio-group name="stay-length" selected-value="${args.selectedValue}" orientation="${args.orientation}">
     <onyx-radio name="stay-length" value="1">One night</onyx-radio>
     <onyx-radio name="stay-length" value="2">Three nights</onyx-radio>
