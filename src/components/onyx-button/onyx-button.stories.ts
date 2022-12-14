@@ -28,9 +28,9 @@ export default {
  * can later on customize with different values for its attribute properties and events
  */
 const Template = (args) => `
-  <hs-button variant="${args.variant}" size="${args.size}">
+  <onyx-button variant="${args.variant}" size="${args.size}">
     ${args.text}
-  </hs-button>
+  </onyx-button>
 `;
 
 /**

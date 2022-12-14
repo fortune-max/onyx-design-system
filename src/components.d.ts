@@ -6,10 +6,6 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface HsButton {
-        "size": string;
-        "variant": string;
-    }
     interface HsGrid {
         "columns": number;
     }
@@ -41,6 +37,10 @@ export namespace Components {
          */
         "selectedIndex": number;
     }
+    interface OnyxButton {
+        "size": string;
+        "variant": string;
+    }
     interface OnyxCheckbox {
         /**
           * The unique name of the checkbox group. Must match the `name` attribute of its parent `<onyx-checkbox-group />`.
@@ -64,6 +64,8 @@ export namespace Components {
           * Default selected value, which will check the matching checkbox element(s).
          */
         "selectedValues": any;
+    }
+    interface OnyxHeader {
     }
     interface OnyxRadio {
         /**
@@ -100,21 +102,15 @@ export namespace Components {
         "orientation": Orientation;
     }
 }
-export interface HsButtonCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLHsButtonElement;
-}
 export interface HsTabCustomEvent<T> extends CustomEvent<T> {
     detail: T;
     target: HTMLHsTabElement;
 }
+export interface OnyxButtonCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLOnyxButtonElement;
+}
 declare global {
-    interface HTMLHsButtonElement extends Components.HsButton, HTMLStencilElement {
-    }
-    var HTMLHsButtonElement: {
-        prototype: HTMLHsButtonElement;
-        new (): HTMLHsButtonElement;
-    };
     interface HTMLHsGridElement extends Components.HsGrid, HTMLStencilElement {
     }
     var HTMLHsGridElement: {
@@ -163,6 +159,12 @@ declare global {
         prototype: HTMLHsTabsElement;
         new (): HTMLHsTabsElement;
     };
+    interface HTMLOnyxButtonElement extends Components.OnyxButton, HTMLStencilElement {
+    }
+    var HTMLOnyxButtonElement: {
+        prototype: HTMLOnyxButtonElement;
+        new (): HTMLOnyxButtonElement;
+    };
     interface HTMLOnyxCheckboxElement extends Components.OnyxCheckbox, HTMLStencilElement {
     }
     var HTMLOnyxCheckboxElement: {
@@ -174,6 +176,12 @@ declare global {
     var HTMLOnyxCheckboxGroupElement: {
         prototype: HTMLOnyxCheckboxGroupElement;
         new (): HTMLOnyxCheckboxGroupElement;
+    };
+    interface HTMLOnyxHeaderElement extends Components.OnyxHeader, HTMLStencilElement {
+    }
+    var HTMLOnyxHeaderElement: {
+        prototype: HTMLOnyxHeaderElement;
+        new (): HTMLOnyxHeaderElement;
     };
     interface HTMLOnyxRadioElement extends Components.OnyxRadio, HTMLStencilElement {
     }
@@ -194,7 +202,6 @@ declare global {
         new (): HTMLOnyxStackElement;
     };
     interface HTMLElementTagNameMap {
-        "hs-button": HTMLHsButtonElement;
         "hs-grid": HTMLHsGridElement;
         "hs-grid-column": HTMLHsGridColumnElement;
         "hs-header": HTMLHsHeaderElement;
@@ -203,19 +210,16 @@ declare global {
         "hs-tab-panel": HTMLHsTabPanelElement;
         "hs-tab-panels": HTMLHsTabPanelsElement;
         "hs-tabs": HTMLHsTabsElement;
+        "onyx-button": HTMLOnyxButtonElement;
         "onyx-checkbox": HTMLOnyxCheckboxElement;
         "onyx-checkbox-group": HTMLOnyxCheckboxGroupElement;
+        "onyx-header": HTMLOnyxHeaderElement;
         "onyx-radio": HTMLOnyxRadioElement;
         "onyx-radio-group": HTMLOnyxRadioGroupElement;
         "onyx-stack": HTMLOnyxStackElement;
     }
 }
 declare namespace LocalJSX {
-    interface HsButton {
-        "onClicked"?: (event: HsButtonCustomEvent<any>) => void;
-        "size"?: string;
-        "variant"?: string;
-    }
     interface HsGrid {
         "columns"?: number;
     }
@@ -246,6 +250,11 @@ declare namespace LocalJSX {
          */
         "selectedIndex"?: number;
     }
+    interface OnyxButton {
+        "onClicked"?: (event: OnyxButtonCustomEvent<any>) => void;
+        "size"?: string;
+        "variant"?: string;
+    }
     interface OnyxCheckbox {
         /**
           * The unique name of the checkbox group. Must match the `name` attribute of its parent `<onyx-checkbox-group />`.
@@ -269,6 +278,8 @@ declare namespace LocalJSX {
           * Default selected value, which will check the matching checkbox element(s).
          */
         "selectedValues"?: any;
+    }
+    interface OnyxHeader {
     }
     interface OnyxRadio {
         /**
@@ -305,7 +316,6 @@ declare namespace LocalJSX {
         "orientation"?: Orientation;
     }
     interface IntrinsicElements {
-        "hs-button": HsButton;
         "hs-grid": HsGrid;
         "hs-grid-column": HsGridColumn;
         "hs-header": HsHeader;
@@ -314,8 +324,10 @@ declare namespace LocalJSX {
         "hs-tab-panel": HsTabPanel;
         "hs-tab-panels": HsTabPanels;
         "hs-tabs": HsTabs;
+        "onyx-button": OnyxButton;
         "onyx-checkbox": OnyxCheckbox;
         "onyx-checkbox-group": OnyxCheckboxGroup;
+        "onyx-header": OnyxHeader;
         "onyx-radio": OnyxRadio;
         "onyx-radio-group": OnyxRadioGroup;
         "onyx-stack": OnyxStack;
@@ -325,7 +337,6 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "hs-button": LocalJSX.HsButton & JSXBase.HTMLAttributes<HTMLHsButtonElement>;
             "hs-grid": LocalJSX.HsGrid & JSXBase.HTMLAttributes<HTMLHsGridElement>;
             "hs-grid-column": LocalJSX.HsGridColumn & JSXBase.HTMLAttributes<HTMLHsGridColumnElement>;
             "hs-header": LocalJSX.HsHeader & JSXBase.HTMLAttributes<HTMLHsHeaderElement>;
@@ -334,8 +345,10 @@ declare module "@stencil/core" {
             "hs-tab-panel": LocalJSX.HsTabPanel & JSXBase.HTMLAttributes<HTMLHsTabPanelElement>;
             "hs-tab-panels": LocalJSX.HsTabPanels & JSXBase.HTMLAttributes<HTMLHsTabPanelsElement>;
             "hs-tabs": LocalJSX.HsTabs & JSXBase.HTMLAttributes<HTMLHsTabsElement>;
+            "onyx-button": LocalJSX.OnyxButton & JSXBase.HTMLAttributes<HTMLOnyxButtonElement>;
             "onyx-checkbox": LocalJSX.OnyxCheckbox & JSXBase.HTMLAttributes<HTMLOnyxCheckboxElement>;
             "onyx-checkbox-group": LocalJSX.OnyxCheckboxGroup & JSXBase.HTMLAttributes<HTMLOnyxCheckboxGroupElement>;
+            "onyx-header": LocalJSX.OnyxHeader & JSXBase.HTMLAttributes<HTMLOnyxHeaderElement>;
             "onyx-radio": LocalJSX.OnyxRadio & JSXBase.HTMLAttributes<HTMLOnyxRadioElement>;
             "onyx-radio-group": LocalJSX.OnyxRadioGroup & JSXBase.HTMLAttributes<HTMLOnyxRadioGroupElement>;
             "onyx-stack": LocalJSX.OnyxStack & JSXBase.HTMLAttributes<HTMLOnyxStackElement>;

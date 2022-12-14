@@ -1,4 +1,4 @@
-# hs-button
+# onyx-button
 
 
 

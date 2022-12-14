@@ -1,11 +1,11 @@
 import { Component, h, Prop, Event } from '@stencil/core';
 
 @Component({
-  tag: 'hs-button',
-  styleUrl: 'hs-button.css',
-  shadow: false, // Disable Shadow DOM to benefit from global styles defined in Design Tokens
+  tag: 'onyx-button',
+  styleUrl: 'onyx-button.css',
+  shadow: false
 })
-export class HsButton {
+export class OnyxButton {
 
   @Prop()
   variant = "neutral";
