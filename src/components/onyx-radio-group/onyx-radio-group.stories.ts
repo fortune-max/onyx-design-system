@@ -1,5 +1,5 @@
 export default {
-  title: 'Components/OnyxRadioGroup',
+  title: 'Components/RadioGroup',
   // Learn more about how to set up controls at https://storybook.js.org/docs/web-components/essentials/controls#annotation
   argTypes: {
     // This will create an `args.variant` binding for your component 

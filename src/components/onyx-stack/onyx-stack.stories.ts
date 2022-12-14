@@ -1,6 +1,6 @@
 
 export default {
-  title: 'Components/OnyxStack',
+  title: 'Components/Stack',
   // Learn more about how to set up controls at https://storybook.js.org/docs/web-components/essentials/controls#annotation
   argTypes: {
     orientation: { control: 'radio', options: ['vertical', 'horizontal'] },
