@@ -5,5 +5,5 @@ import { themes } from '@storybook/theming';
 // https://storybook.js.org/docs/react/configure/theming
 
 addons.setConfig({
-  theme: themes.normal,
+  theme: themes.dark,
 });

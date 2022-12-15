@@ -1,10 +1,11 @@
 import { Component, Host, h, Prop } from '@stencil/core';
 
-type ActionType = 'default' | 'success' | 'error' | 'warning';
+type ActionType = 'neutral' | 'success' | 'error' | 'warning';
 
 export interface Action {
   title: string;
-  type: ActionType;
+  type?: ActionType;
+  onClick?: () => void;
 }
 
 @Component({
@@ -16,17 +17,24 @@ export interface Action {
 export class OnyxCallout {
   @Prop({ reflect: true }) header: string;
 
-  @Prop({ reflect: true }) action: Action;
+  @Prop({ reflect: true }) type: 'neutral' | 'success' | 'error' | 'warning' = 'neutral';
+
+  @Prop() actionType: string;
+
+  @Prop() actionTitle: string = 'default';
 
   render() {
     return (
       <Host>
-        <div class="content">
-          <h4>Test</h4>
-          <slot></slot>
-        </div>
-        <div class="action">
-          <onyx-button>Action</onyx-button>
+        <div class={`container ${this.type}`}>
+          <div class={`content `}>
+            <h4>{this.header}</h4>
+
+            <slot></slot>
+          </div>
+          <div class="action">
+            <onyx-button variant={this.type}>{this.actionTitle}</onyx-button>
+          </div>
         </div>
       </Host>
     );

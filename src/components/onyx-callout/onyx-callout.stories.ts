@@ -7,7 +7,7 @@ export default {
       control: {
         type: 'select',
       },
-      options: ['default', 'success', 'warning', 'error'],
+      options: ['neutral', 'success', 'warning', 'error'],
     },
   },
 };
@@ -15,11 +15,16 @@ export default {
 const Template = args => `
     <onyx-callout 
       type="${args.type}" 
+      header="${args.header}"
+      action-title="${args.actionTitle}"
       >
-      This is an infromal callout, for more information click the callout action button
+        ${args.content}
       </onyx-callout>`;
 
-export const TextInputStory = Template.bind({});
-TextInputStory.args = {
-  type: 'default',
+export const CalloutStory = Template.bind({});
+CalloutStory.args = {
+  type: 'neutral',
+  header: 'Informal Callout',
+  content: 'This is an infromal callout, for more information click the callout action button',
+  actionTitle: 'Action',
 };

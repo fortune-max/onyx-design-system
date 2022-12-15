@@ -7,10 +7,12 @@
 
 ## Properties
 
-| Property | Attribute | Description | Type     | Default     |
-| -------- | --------- | ----------- | -------- | ----------- |
-| `action` | --        |             | `Action` | `undefined` |
-| `header` | `header`  |             | `string` | `undefined` |
+| Property      | Attribute      | Description | Type                                             | Default     |
+| ------------- | -------------- | ----------- | ------------------------------------------------ | ----------- |
+| `actionTitle` | `action-title` |             | `string`                                         | `'default'` |
+| `actionType`  | `action-type`  |             | `string`                                         | `undefined` |
+| `header`      | `header`       |             | `string`                                         | `undefined` |
+| `type`        | `type`         |             | `"error" \| "neutral" \| "success" \| "warning"` | `'neutral'` |
 
 
 ## Dependencies

@@ -1,4 +1,8 @@
-:host {
+:host * {
+  margin: 0 !important;
+}
+
+.container {
   display: block;
   border: 1px solid #000;
   border-radius: 2px;
@@ -8,10 +12,25 @@
   align-items: center;
 }
 
-:host * {
-  margin: 0 !important;
-}
-
 h4 {
   margin: 0;
+}
+
+.container.neutral {
+  border-color: var(--onyx-color-primary);
+}
+
+.container.error {
+  border-color: var(--onyx-color-error);
+  background-color: #f8eaea;
+}
+
+.container.success {
+  border-color: var(--onyx-color-success);
+  background-color: #ecfbe9;
+}
+
+.container.warning {
+  border-color: var(--onyx-color-warning);
+  background-color: #fdf6ec;
 }
