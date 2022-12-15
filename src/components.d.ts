@@ -29,7 +29,7 @@ export namespace Components {
     }
     interface OnyxButton {
         "size": string;
-        "variant": string;
+        "variant": "neutral" | "success" | "error" | "warning";
     }
     interface OnyxCheckbox {
         /**
@@ -270,7 +270,7 @@ declare namespace LocalJSX {
     interface OnyxButton {
         "onClicked"?: (event: OnyxButtonCustomEvent<any>) => void;
         "size"?: string;
-        "variant"?: string;
+        "variant"?: "neutral" | "success" | "error" | "warning";
     }
     interface OnyxCheckbox {
         /**

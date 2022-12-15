@@ -11,12 +11,12 @@ export default {
       defaultValue: 'Submit',
     },
     variant: {
-      options: ['neutral', 'error'],
+      options: ['neutral', 'error', 'success', 'warning'],
       control: { type: 'select' },
       description: 'The button variant',
     },
     size: {
-      options: ['medium', 'small', 'large'],
+      options: ['small', 'medium', 'large'],
       control: { type: 'radio' },
       description: 'The button size'
     },
