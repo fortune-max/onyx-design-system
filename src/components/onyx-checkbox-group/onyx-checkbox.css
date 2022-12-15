@@ -5,8 +5,9 @@
 label {
   font-family: Arial, Helvetica, sans-serif;
 }
-/* 
-label, input {
+
+label,
+input {
   cursor: pointer;
 }
 
@@ -18,22 +19,32 @@ input {
   width: 16px;
   height: 16px;
 
-  border-radius: 50%;
-  transition: border .4s, background .4s;
+  border-radius: 2px;
+  transition: border 0.4s, background 0.4s;
   border: 4px solid white;
 
-  background: #CCC;
-  box-shadow: 0 0 0 1px #CCC;
+  box-shadow: 0 0 0 1px #ccc;
 }
 
 input:hover {
-  background: #888;
   border: 2px solid white;
   box-shadow: 0 0 0 1px #888;
 }
 
 input:checked {
-  background: #09F;
-  border: 2px solid white;
-  box-shadow: 0 0 0 2px #09F;
-} */
+  display: none;
+}
+
+input:checked + .checkbox {
+  background-color: black;
+  width: 16px;
+  height: 16px;
+  border: 1px solid black;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  margin-left: 4px;
+  margin-bottom: 32px;
+}

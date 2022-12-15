@@ -4,7 +4,7 @@ import checkboxGroupStore from './onyx-checkbox-group.store';
 /**
  * The single `<onyx-checkbox />` element must be used as a child node of a `<onyx-checkbox-group />` element.
  * Please refer to the documentation of the latter for further details.
- * 
+ *
  * ### Example
  * ```html
  * <onyx-checkbox-group name="my-input" selected-values="[1, 2]">
@@ -20,7 +20,6 @@ import checkboxGroupStore from './onyx-checkbox-group.store';
   scoped: true,
 })
 export class OnyxCheckbox {
-
   /**
    * The particular value of this checkbox item.
    */
@@ -39,13 +38,19 @@ export class OnyxCheckbox {
       <Host>
         <label>
           <onyx-stack orientation="horizontal">
-            <input
-              type="checkbox"
-              value={this.value}
-              name={this.name}
-              // checked={checkboxGroupStore.checkboxGroups[this.name].selectedValues.inlcudes(this.value)}
-              checked={checkboxGroupStore.checkboxGroups[this.name].selectedValues.includes(this.value)}
-            />
+            <div>
+              <input type="checkbox" value={this.value} name={this.name} checked={checkboxGroupStore.checkboxGroups[this.name].selectedValues.includes(this.value)} />
+              <div class="checkbox">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M19.8335 7.2249L9.58043 17.4779L4.1678 12.0653L4.87491 11.3582L9.58043 16.0637L19.1264 6.51779L19.8335 7.2249Z"
+                    fill="white"
+                  />
+                </svg>
+              </div>
+            </div>
             <slot />
           </onyx-stack>
         </label>
