@@ -1,0 +1,52 @@
+.onyx-input label {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 14px;
+  line-height: 16.79px;
+  color: #1c1c1c;
+  font-weight: 400;
+}
+
+.onyx-input input {
+  display: block;
+  width: 100%;
+  height: calc(48px - 26px);
+  padding: 12px 8px;
+  border: 1px solid #c6c6c6;
+  border-radius: 2px;
+  font-size: 14px;
+  line-height: 16.79px;
+}
+
+.onyx-input p.hint {
+  color: #777777;
+  font-size: 12px !important;
+  line-height: 18px;
+  margin-top: 4px;
+  margin-bottom: 0;
+}
+
+.onyx-input:hover input {
+  border-color: #696969;
+}
+
+.onyx-input input:disabled {
+  background-color: #e1e1e1;
+  cursor: not-allowed;
+}
+
+.onyx-input input:read-only {
+  background-color: #e1e1e1;
+  border-color: transparent;
+  outline: none;
+}
+
+.onyx-input.error input {
+  background-color: #f8eaea;
+  border-color: #c85454;
+  outline: none;
+}
+
+.onyx-input.error .hint {
+  color: #c85454;
+}
