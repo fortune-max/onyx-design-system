@@ -8,7 +8,7 @@ import { Component, h, Prop, Event } from '@stencil/core';
 export class OnyxButton {
 
   @Prop()
-  variant: "neutral" | "success" | "error" | "warning" = "neutral";
+  variant: "neutral" | "success" | "error" | "warning" | "disabled" = "neutral";
 
   @Prop()
   size = "medium";

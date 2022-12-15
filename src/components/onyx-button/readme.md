@@ -7,10 +7,10 @@
 
 ## Properties
 
-| Property  | Attribute | Description | Type                                             | Default     |
-| --------- | --------- | ----------- | ------------------------------------------------ | ----------- |
-| `size`    | `size`    |             | `string`                                         | `"medium"`  |
-| `variant` | `variant` |             | `"error" \| "neutral" \| "success" \| "warning"` | `"neutral"` |
+| Property  | Attribute | Description | Type                                                           | Default     |
+| --------- | --------- | ----------- | -------------------------------------------------------------- | ----------- |
+| `size`    | `size`    |             | `string`                                                       | `"medium"`  |
+| `variant` | `variant` |             | `"disabled" \| "error" \| "neutral" \| "success" \| "warning"` | `"neutral"` |
 
 
 ## Events

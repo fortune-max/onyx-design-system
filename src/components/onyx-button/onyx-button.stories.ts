@@ -11,7 +11,7 @@ export default {
       defaultValue: 'Submit',
     },
     variant: {
-      options: ['neutral', 'error', 'success', 'warning'],
+      options: ['neutral', 'error', 'success', 'warning', 'disabled'],
       control: { type: 'select' },
       description: 'The button variant',
     },
