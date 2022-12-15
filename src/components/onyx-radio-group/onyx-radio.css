@@ -1,3 +1,5 @@
+@import "../../design-tokens/css/_variables.css";
+
 :host {
   display: block;
 }
@@ -10,7 +12,7 @@ label, input {
   cursor: pointer;
 }
 
-input {
+.onyx-radio input {
   appearance: none;
   -webkit-appearance: none;
 
@@ -26,14 +28,14 @@ input {
   box-shadow: 0 0 0 1px #CCC;
 }
 
-input:hover {
+.onyx-radio input:hover {
   background: #888;
   border: 2px solid white;
   box-shadow: 0 0 0 1px #888;
 }
 
-input:checked {
-  background: #09F;
+.onyx-radio input:checked {
+  background: var(--onyx-color-primary);
   border: 2px solid white;
-  box-shadow: 0 0 0 2px #09F;
+  box-shadow: 0 0 0 2px var(--onyx-color-primary);
 }

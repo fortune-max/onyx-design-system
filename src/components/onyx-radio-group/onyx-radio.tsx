@@ -16,8 +16,7 @@ import radioGroupStore from './onyx-radio-group.store';
 @Component({
   tag: 'onyx-radio',
   styleUrl: 'onyx-radio.css',
-  shadow: false,
-  scoped: true,
+  shadow: false,  // benefit from global design token styles, exported from figma
 })
 export class OnyxRadio {
 
@@ -36,7 +35,7 @@ export class OnyxRadio {
 
   render() {
     return (
-      <Host>
+      <Host class="onyx-radio">
         <label>
           <onyx-stack orientation="horizontal">
             <input
