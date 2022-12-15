@@ -28,7 +28,7 @@ export default {
 
 const Template = (args) => `
   <onyx-box height="${args.height}" width="${args.width}" background-color="${args.backgroundColor}" margin="${args.margin}" padding="${args.padding}" border-radius="${args.borderRadius}" border="${args.border}" display="${args.display}" align-items="${args.alignItems}" align-content="${args.alignContent}" justify-content="${args.justifyContent}" gap="${args.gap}" as="${args.as}">
-    This is a 100px x 100px box element
+    ${args.content}
   </onyx-box>
 `;
 
@@ -47,4 +47,5 @@ BoxStory.args = {
   justifyContent: 'center',
   gap: '10px',
   as: 'span',
+  content: 'This is a 100px x 100px box element',
 };
