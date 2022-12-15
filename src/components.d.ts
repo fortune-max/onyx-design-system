@@ -5,6 +5,7 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
+import { Action } from "./components/onyx-callout/onyx-callout";
 export namespace Components {
     interface HsGrid {
         "columns": number;
@@ -27,9 +28,15 @@ export namespace Components {
          */
         "selectedIndex": number;
     }
+    interface OnyxAlert {
+    }
     interface OnyxButton {
         "size": string;
         "variant": "neutral" | "success" | "error" | "warning";
+    }
+    interface OnyxCallout {
+        "action": Action;
+        "header": string;
     }
     interface OnyxCheckbox {
         /**
@@ -166,11 +173,23 @@ declare global {
         prototype: HTMLHsTabsElement;
         new (): HTMLHsTabsElement;
     };
+    interface HTMLOnyxAlertElement extends Components.OnyxAlert, HTMLStencilElement {
+    }
+    var HTMLOnyxAlertElement: {
+        prototype: HTMLOnyxAlertElement;
+        new (): HTMLOnyxAlertElement;
+    };
     interface HTMLOnyxButtonElement extends Components.OnyxButton, HTMLStencilElement {
     }
     var HTMLOnyxButtonElement: {
         prototype: HTMLOnyxButtonElement;
         new (): HTMLOnyxButtonElement;
+    };
+    interface HTMLOnyxCalloutElement extends Components.OnyxCallout, HTMLStencilElement {
+    }
+    var HTMLOnyxCalloutElement: {
+        prototype: HTMLOnyxCalloutElement;
+        new (): HTMLOnyxCalloutElement;
     };
     interface HTMLOnyxCheckboxElement extends Components.OnyxCheckbox, HTMLStencilElement {
     }
@@ -234,7 +253,9 @@ declare global {
         "hs-tab-panel": HTMLHsTabPanelElement;
         "hs-tab-panels": HTMLHsTabPanelsElement;
         "hs-tabs": HTMLHsTabsElement;
+        "onyx-alert": HTMLOnyxAlertElement;
         "onyx-button": HTMLOnyxButtonElement;
+        "onyx-callout": HTMLOnyxCalloutElement;
         "onyx-checkbox": HTMLOnyxCheckboxElement;
         "onyx-checkbox-group": HTMLOnyxCheckboxGroupElement;
         "onyx-header": HTMLOnyxHeaderElement;
@@ -267,10 +288,16 @@ declare namespace LocalJSX {
          */
         "selectedIndex"?: number;
     }
+    interface OnyxAlert {
+    }
     interface OnyxButton {
         "onClicked"?: (event: OnyxButtonCustomEvent<any>) => void;
         "size"?: string;
         "variant"?: "neutral" | "success" | "error" | "warning";
+    }
+    interface OnyxCallout {
+        "action"?: Action;
+        "header"?: string;
     }
     interface OnyxCheckbox {
         /**
@@ -363,7 +390,9 @@ declare namespace LocalJSX {
         "hs-tab-panel": HsTabPanel;
         "hs-tab-panels": HsTabPanels;
         "hs-tabs": HsTabs;
+        "onyx-alert": OnyxAlert;
         "onyx-button": OnyxButton;
+        "onyx-callout": OnyxCallout;
         "onyx-checkbox": OnyxCheckbox;
         "onyx-checkbox-group": OnyxCheckboxGroup;
         "onyx-header": OnyxHeader;
@@ -386,7 +415,9 @@ declare module "@stencil/core" {
             "hs-tab-panel": LocalJSX.HsTabPanel & JSXBase.HTMLAttributes<HTMLHsTabPanelElement>;
             "hs-tab-panels": LocalJSX.HsTabPanels & JSXBase.HTMLAttributes<HTMLHsTabPanelsElement>;
             "hs-tabs": LocalJSX.HsTabs & JSXBase.HTMLAttributes<HTMLHsTabsElement>;
+            "onyx-alert": LocalJSX.OnyxAlert & JSXBase.HTMLAttributes<HTMLOnyxAlertElement>;
             "onyx-button": LocalJSX.OnyxButton & JSXBase.HTMLAttributes<HTMLOnyxButtonElement>;
+            "onyx-callout": LocalJSX.OnyxCallout & JSXBase.HTMLAttributes<HTMLOnyxCalloutElement>;
             "onyx-checkbox": LocalJSX.OnyxCheckbox & JSXBase.HTMLAttributes<HTMLOnyxCheckboxElement>;
             "onyx-checkbox-group": LocalJSX.OnyxCheckboxGroup & JSXBase.HTMLAttributes<HTMLOnyxCheckboxGroupElement>;
             "onyx-header": LocalJSX.OnyxHeader & JSXBase.HTMLAttributes<HTMLOnyxHeaderElement>;
