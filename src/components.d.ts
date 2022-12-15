@@ -65,6 +65,11 @@ export namespace Components {
          */
         "textAlign": 'left' | 'right' | 'center';
     }
+    interface OnyxList {
+        "as": "ol" | "ul";
+    }
+    interface OnyxListItem {
+    }
     interface OnyxRadio {
         /**
           * The unique name of the radio button group. Must match the `name` attribute of its parent `<onyx-radio-group />`.
@@ -175,6 +180,18 @@ declare global {
         prototype: HTMLOnyxHeaderElement;
         new (): HTMLOnyxHeaderElement;
     };
+    interface HTMLOnyxListElement extends Components.OnyxList, HTMLStencilElement {
+    }
+    var HTMLOnyxListElement: {
+        prototype: HTMLOnyxListElement;
+        new (): HTMLOnyxListElement;
+    };
+    interface HTMLOnyxListItemElement extends Components.OnyxListItem, HTMLStencilElement {
+    }
+    var HTMLOnyxListItemElement: {
+        prototype: HTMLOnyxListItemElement;
+        new (): HTMLOnyxListItemElement;
+    };
     interface HTMLOnyxRadioElement extends Components.OnyxRadio, HTMLStencilElement {
     }
     var HTMLOnyxRadioElement: {
@@ -205,6 +222,8 @@ declare global {
         "onyx-checkbox": HTMLOnyxCheckboxElement;
         "onyx-checkbox-group": HTMLOnyxCheckboxGroupElement;
         "onyx-header": HTMLOnyxHeaderElement;
+        "onyx-list": HTMLOnyxListElement;
+        "onyx-list-item": HTMLOnyxListItemElement;
         "onyx-radio": HTMLOnyxRadioElement;
         "onyx-radio-group": HTMLOnyxRadioGroupElement;
         "onyx-stack": HTMLOnyxStackElement;
@@ -270,6 +289,11 @@ declare namespace LocalJSX {
          */
         "textAlign"?: 'left' | 'right' | 'center';
     }
+    interface OnyxList {
+        "as"?: "ol" | "ul";
+    }
+    interface OnyxListItem {
+    }
     interface OnyxRadio {
         /**
           * The unique name of the radio button group. Must match the `name` attribute of its parent `<onyx-radio-group />`.
@@ -316,6 +340,8 @@ declare namespace LocalJSX {
         "onyx-checkbox": OnyxCheckbox;
         "onyx-checkbox-group": OnyxCheckboxGroup;
         "onyx-header": OnyxHeader;
+        "onyx-list": OnyxList;
+        "onyx-list-item": OnyxListItem;
         "onyx-radio": OnyxRadio;
         "onyx-radio-group": OnyxRadioGroup;
         "onyx-stack": OnyxStack;
@@ -336,6 +362,8 @@ declare module "@stencil/core" {
             "onyx-checkbox": LocalJSX.OnyxCheckbox & JSXBase.HTMLAttributes<HTMLOnyxCheckboxElement>;
             "onyx-checkbox-group": LocalJSX.OnyxCheckboxGroup & JSXBase.HTMLAttributes<HTMLOnyxCheckboxGroupElement>;
             "onyx-header": LocalJSX.OnyxHeader & JSXBase.HTMLAttributes<HTMLOnyxHeaderElement>;
+            "onyx-list": LocalJSX.OnyxList & JSXBase.HTMLAttributes<HTMLOnyxListElement>;
+            "onyx-list-item": LocalJSX.OnyxListItem & JSXBase.HTMLAttributes<HTMLOnyxListItemElement>;
             "onyx-radio": LocalJSX.OnyxRadio & JSXBase.HTMLAttributes<HTMLOnyxRadioElement>;
             "onyx-radio-group": LocalJSX.OnyxRadioGroup & JSXBase.HTMLAttributes<HTMLOnyxRadioGroupElement>;
             "onyx-stack": LocalJSX.OnyxStack & JSXBase.HTMLAttributes<HTMLOnyxStackElement>;
