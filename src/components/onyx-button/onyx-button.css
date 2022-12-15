@@ -35,6 +35,11 @@ button.warning {
   background-color: var(--onyx-color-warning);
 }
 
+button.disabled {
+  color: var(--onyx-color-body);
+  background-color: var(--onyx-color-disabled);
+}
+
 button.small {
   font-size: 12px;
   padding: 10px 16px;

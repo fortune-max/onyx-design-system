@@ -32,7 +32,7 @@ export namespace Components {
     }
     interface OnyxButton {
         "size": string;
-        "variant": "neutral" | "success" | "error" | "warning";
+        "variant": "neutral" | "success" | "error" | "warning" | "disabled";
     }
     interface OnyxCallout {
         "action": Action;
@@ -293,7 +293,7 @@ declare namespace LocalJSX {
     interface OnyxButton {
         "onClicked"?: (event: OnyxButtonCustomEvent<any>) => void;
         "size"?: string;
-        "variant"?: "neutral" | "success" | "error" | "warning";
+        "variant"?: "neutral" | "success" | "error" | "warning" | "disabled";
     }
     interface OnyxCallout {
         "action"?: Action;
