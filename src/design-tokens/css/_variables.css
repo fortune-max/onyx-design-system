@@ -3,6 +3,10 @@
  * Generated on Sun, 04 Dec 2022 02:44:14 GMT
  */
 
+ /* Import alegreya font */
+ @import url('https://fonts.googleapis.com/css2?family=Alegreya:wght@400;700&display=swap');
+
+
 :root {
   --hs-spacing-large: [object Object];
   --hs-spacing-small: [object Object];
@@ -48,4 +52,12 @@
   --hs-typography-body-paragraph-indent: 0;
   --hs-typography-body-paragraph-spacing: 0;
   --hs-typography-body-text-case: none;
+  /* Onyx styles, to be gotten from figma */
+  --onyx-font-default: Helvetica, 'Alegreya';
+  --onyx-color-success: #298114ff;
+  --onyx-color-warning: #e9a643ff;
+  --onyx-color-error: #842222ff;
+  --onyx-color-body: #ffffffff;
+  --onyx-color-disabled: #b9b9b9ff;
+  --onyx-color-primary: #1c1c1cff;
 }
