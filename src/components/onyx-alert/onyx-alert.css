@@ -1,3 +1,32 @@
-:host {
+:host * {
+  margin: 0 !important;
+}
+
+.container {
   display: block;
+  border-radius: 2px;
+  padding: 12px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h4 {
+  margin: 0;
+}
+
+.container.neutral {
+  background-color: #f6f6f6;
+}
+
+.container.error {
+  background-color: #f8eaea;
+}
+
+.container.success {
+  background-color: #ecfbe9;
+}
+
+.container.warning {
+  background-color: #fdf6ec;
 }

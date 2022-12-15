@@ -1,4 +1,4 @@
-import { Component, Host, h } from '@stencil/core';
+import { Component, Host, h, Prop } from '@stencil/core';
 
 @Component({
   tag: 'onyx-alert',
@@ -6,13 +6,19 @@ import { Component, Host, h } from '@stencil/core';
   shadow: true,
 })
 export class OnyxAlert {
+  @Prop({ reflect: true }) content: string;
+
+  @Prop({ reflect: true }) type: 'neutral' | 'success' | 'error' | 'warning' = 'neutral';
 
   render() {
     return (
       <Host>
-        <slot></slot>
+        <div class={`container ${this.type}`}>
+          <div class={`content `}>
+            <span>{this.content}</span>
+          </div>
+        </div>
       </Host>
     );
   }
-
 }

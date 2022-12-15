@@ -28,6 +28,8 @@ export namespace Components {
         "selectedIndex": number;
     }
     interface OnyxAlert {
+        "content": string;
+        "type": 'neutral' | 'success' | 'error' | 'warning';
     }
     interface OnyxBox {
         "alignContent": "center" | "flex-start" | "flex-end" | "space-around" | "space-between" | "stretch";
@@ -312,6 +314,8 @@ declare namespace LocalJSX {
         "selectedIndex"?: number;
     }
     interface OnyxAlert {
+        "content"?: string;
+        "type"?: 'neutral' | 'success' | 'error' | 'warning';
     }
     interface OnyxBox {
         "alignContent"?: "center" | "flex-start" | "flex-end" | "space-around" | "space-between" | "stretch";

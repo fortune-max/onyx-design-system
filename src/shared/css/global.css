@@ -3,11 +3,52 @@
   shared across components in your Design System.
 */
 
-@import "../../design-tokens/css/_variables.css";
+@import '../../design-tokens/css/_variables.css';
 
 /* @import url('https://fonts.googleapis.com/css2?family=Alegreya:wght@400;700&display=swap'); */
 
-/* @font-face {
-  font-family: "Swiss 721";
-  src: url(http://www.example.org/mycustomfont.ttf) format("truetype");
-} */
+@font-face {
+  font-family: 'Swiss 721';
+  src: url(../../assets/fonts/Swiss\ 721\ Black.otf);
+}
+
+@font-face {
+  font-family: 'Swiss 721';
+  src: url(../../assets/fonts/Swiss\ 721\ Black\ Italic.otf);
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Swiss 721';
+  src: url(../../assets/fonts/Swiss\ 721\ Bold.otf);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Swiss 721';
+  src: url(../../assets/fonts/Swiss\ 721\ Bold\ Italic.otf);
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Swiss 721';
+  src: url(../../assets/fonts/Swiss\ 721\ Heavy.otf);
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Swiss 721';
+  src: url(../../assets/fonts/Swiss\ 721\ Italic.otf);
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Swiss 721';
+  src: url(../../assets/fonts/Swiss\ 721\ Medium.otf);
+  font-weight: 300;
+}
+
+* {
+  font-family: 'Swiss 721', sans-serif !important;
+}

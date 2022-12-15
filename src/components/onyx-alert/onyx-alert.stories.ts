@@ -7,26 +7,18 @@ export default {
       control: {
         type: 'select',
       },
-      options: ['default'],
+      options: ['neutral', 'success', 'warning', 'error'],
     },
   },
 };
 
 const Template = args => `
-    <onyx-input 
-      label="${args.label}" 
-      placeholder="${args.placeholder}" 
-      value="${args.value}" ${(args.readonly && 'readonly') || ''} ${(args.disabled && 'disabled') || ''} 
-      ${(args.hasError && 'has-error') || ''}
-      hint="${args.hint}" />`;
+    <onyx-alert 
+      content="${args.content}" 
+      type="${args.type}"></onyx-alert>`;
 
-export const TextInputStory = Template.bind({});
-TextInputStory.args = {
-  label: 'Username',
-  placeholder: 'Please type your username',
-  hint: 'Please make sure to enter a correct username.',
-  readonly: false,
-  disabled: false,
-  hasError: false,
-  value: '',
+export const AlertStory = Template.bind({});
+AlertStory.args = {
+  content: 'Change a few things up and try again.',
+  type: 'neutral',
 };
