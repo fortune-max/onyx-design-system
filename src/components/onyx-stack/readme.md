@@ -30,6 +30,7 @@ flow capabilities for all its children components and elements.
 
 ### Used by
 
+ - [hs-tab-list](../hs-tabs)
  - [onyx-checkbox](../onyx-checkbox-group)
  - [onyx-checkbox-group](../onyx-checkbox-group)
  - [onyx-radio](../onyx-radio-group)
@@ -38,6 +39,7 @@ flow capabilities for all its children components and elements.
 ### Graph
 ```mermaid
 graph TD;
+  hs-tab-list --> onyx-stack
   onyx-checkbox --> onyx-stack
   onyx-checkbox-group --> onyx-stack
   onyx-radio --> onyx-stack

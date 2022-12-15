@@ -3,15 +3,14 @@ export default {
   // Learn more about how to set up controls at https://storybook.js.org/docs/web-components/essentials/controls#annotation
   argTypes: {
     selectedIndex: {
-      options: [0, 1, 2, 3],
+      options: [0, 1, 2, 3, 4],
       control: { type: 'select' },
       description: 'Tab selected by default',
     },
-  }
+  },
 };
 
-
-const Template = (args) => `
+const Template = args => `
   <hs-tabs selected-index="${args.selectedIndex}">
     <hs-tab-list>
       <hs-tab>Episode 1</hs-tab>

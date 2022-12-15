@@ -8,15 +8,15 @@ import { css } from '@emotion/css';
 export class HsTabList {
   render() {
     const tabListStyles = css`
-      box-shadow: inset 0px -18px 0px -17px #CCC;
+      box-shadow: inset 0px -18px 0px -17px #ccc;
     `;
 
     return (
       <div class={tabListStyles}>
-        <hs-stack orientation="horizontal" gap="small">
+        <onyx-stack orientation="horizontal" gap="small">
           <slot />
-        </hs-stack>
+        </onyx-stack>
       </div>
-    )
+    );
   }
 }
