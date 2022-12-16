@@ -1,11 +1,11 @@
 import { Component, Host, h, Event, EventEmitter, Element, State, Method } from '@stencil/core';
 
 @Component({
-  tag: 'hs-tab',
-  styleUrl: 'hs-tab.css',
+  tag: 'onyx-tab',
+  styleUrl: 'onyx-tab.css',
   shadow: false,
 })
-export class HsTab {
+export class OnyxTab {
   @State()
   isSelected = false;
 
@@ -33,7 +33,7 @@ export class HsTab {
   render() {
     return (
       <Host>
-        <div class={this.isSelected ? 'hs-tab--selected' : 'hs-tab'} onClick={this.tabClickHandler.bind(this)}>
+        <div class={this.isSelected ? 'onyx-tab--selected' : 'onyx-tab'} onClick={this.tabClickHandler.bind(this)}>
           <slot />
         </div>
       </Host>

@@ -1,10 +1,10 @@
 import { Component, Host, h } from '@stencil/core';
 
 @Component({
-  tag: 'hs-tab-panels',
+  tag: 'onyx-tab-panels',
   shadow: true,
 })
-export class HsTabPanels {
+export class OnyxTabPanels {
   render() {
     return (
       <Host>

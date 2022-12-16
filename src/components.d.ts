@@ -6,27 +6,6 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface HsGrid {
-        "columns": number;
-    }
-    interface HsGridColumn {
-    }
-    interface HsTab {
-        "toggleSelected": (selected: boolean) => Promise<void>;
-    }
-    interface HsTabList {
-    }
-    interface HsTabPanel {
-        "toggleSelected": (selected: boolean) => Promise<void>;
-    }
-    interface HsTabPanels {
-    }
-    interface HsTabs {
-        /**
-          * Configures the tab/panels to select by default upon loading.
-         */
-        "selectedIndex": number;
-    }
     interface OnyxAlert {
         "content": string;
         "type": 'neutral' | 'success' | 'error' | 'warning';
@@ -80,6 +59,11 @@ export namespace Components {
           * Default selected value, which will check the matching checkbox element(s).
          */
         "selectedValues": any;
+    }
+    interface OnyxGrid {
+        "columns": number;
+    }
+    interface OnyxGridColumn {
     }
     interface OnyxHeader {
         /**
@@ -140,6 +124,22 @@ export namespace Components {
          */
         "orientation": Orientation;
     }
+    interface OnyxTab {
+        "toggleSelected": (selected: boolean) => Promise<void>;
+    }
+    interface OnyxTabList {
+    }
+    interface OnyxTabPanel {
+        "toggleSelected": (selected: boolean) => Promise<void>;
+    }
+    interface OnyxTabPanels {
+    }
+    interface OnyxTabs {
+        /**
+          * Configures the tab/panels to select by default upon loading.
+         */
+        "selectedIndex": number;
+    }
     interface OnyxTextarea {
         "disabled": boolean;
         "hasError": boolean;
@@ -152,57 +152,15 @@ export namespace Components {
         "value": string;
     }
 }
-export interface HsTabCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLHsTabElement;
-}
 export interface OnyxButtonCustomEvent<T> extends CustomEvent<T> {
     detail: T;
     target: HTMLOnyxButtonElement;
 }
+export interface OnyxTabCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLOnyxTabElement;
+}
 declare global {
-    interface HTMLHsGridElement extends Components.HsGrid, HTMLStencilElement {
-    }
-    var HTMLHsGridElement: {
-        prototype: HTMLHsGridElement;
-        new (): HTMLHsGridElement;
-    };
-    interface HTMLHsGridColumnElement extends Components.HsGridColumn, HTMLStencilElement {
-    }
-    var HTMLHsGridColumnElement: {
-        prototype: HTMLHsGridColumnElement;
-        new (): HTMLHsGridColumnElement;
-    };
-    interface HTMLHsTabElement extends Components.HsTab, HTMLStencilElement {
-    }
-    var HTMLHsTabElement: {
-        prototype: HTMLHsTabElement;
-        new (): HTMLHsTabElement;
-    };
-    interface HTMLHsTabListElement extends Components.HsTabList, HTMLStencilElement {
-    }
-    var HTMLHsTabListElement: {
-        prototype: HTMLHsTabListElement;
-        new (): HTMLHsTabListElement;
-    };
-    interface HTMLHsTabPanelElement extends Components.HsTabPanel, HTMLStencilElement {
-    }
-    var HTMLHsTabPanelElement: {
-        prototype: HTMLHsTabPanelElement;
-        new (): HTMLHsTabPanelElement;
-    };
-    interface HTMLHsTabPanelsElement extends Components.HsTabPanels, HTMLStencilElement {
-    }
-    var HTMLHsTabPanelsElement: {
-        prototype: HTMLHsTabPanelsElement;
-        new (): HTMLHsTabPanelsElement;
-    };
-    interface HTMLHsTabsElement extends Components.HsTabs, HTMLStencilElement {
-    }
-    var HTMLHsTabsElement: {
-        prototype: HTMLHsTabsElement;
-        new (): HTMLHsTabsElement;
-    };
     interface HTMLOnyxAlertElement extends Components.OnyxAlert, HTMLStencilElement {
     }
     var HTMLOnyxAlertElement: {
@@ -238,6 +196,18 @@ declare global {
     var HTMLOnyxCheckboxGroupElement: {
         prototype: HTMLOnyxCheckboxGroupElement;
         new (): HTMLOnyxCheckboxGroupElement;
+    };
+    interface HTMLOnyxGridElement extends Components.OnyxGrid, HTMLStencilElement {
+    }
+    var HTMLOnyxGridElement: {
+        prototype: HTMLOnyxGridElement;
+        new (): HTMLOnyxGridElement;
+    };
+    interface HTMLOnyxGridColumnElement extends Components.OnyxGridColumn, HTMLStencilElement {
+    }
+    var HTMLOnyxGridColumnElement: {
+        prototype: HTMLOnyxGridColumnElement;
+        new (): HTMLOnyxGridColumnElement;
     };
     interface HTMLOnyxHeaderElement extends Components.OnyxHeader, HTMLStencilElement {
     }
@@ -281,6 +251,36 @@ declare global {
         prototype: HTMLOnyxStackElement;
         new (): HTMLOnyxStackElement;
     };
+    interface HTMLOnyxTabElement extends Components.OnyxTab, HTMLStencilElement {
+    }
+    var HTMLOnyxTabElement: {
+        prototype: HTMLOnyxTabElement;
+        new (): HTMLOnyxTabElement;
+    };
+    interface HTMLOnyxTabListElement extends Components.OnyxTabList, HTMLStencilElement {
+    }
+    var HTMLOnyxTabListElement: {
+        prototype: HTMLOnyxTabListElement;
+        new (): HTMLOnyxTabListElement;
+    };
+    interface HTMLOnyxTabPanelElement extends Components.OnyxTabPanel, HTMLStencilElement {
+    }
+    var HTMLOnyxTabPanelElement: {
+        prototype: HTMLOnyxTabPanelElement;
+        new (): HTMLOnyxTabPanelElement;
+    };
+    interface HTMLOnyxTabPanelsElement extends Components.OnyxTabPanels, HTMLStencilElement {
+    }
+    var HTMLOnyxTabPanelsElement: {
+        prototype: HTMLOnyxTabPanelsElement;
+        new (): HTMLOnyxTabPanelsElement;
+    };
+    interface HTMLOnyxTabsElement extends Components.OnyxTabs, HTMLStencilElement {
+    }
+    var HTMLOnyxTabsElement: {
+        prototype: HTMLOnyxTabsElement;
+        new (): HTMLOnyxTabsElement;
+    };
     interface HTMLOnyxTextareaElement extends Components.OnyxTextarea, HTMLStencilElement {
     }
     var HTMLOnyxTextareaElement: {
@@ -288,19 +288,14 @@ declare global {
         new (): HTMLOnyxTextareaElement;
     };
     interface HTMLElementTagNameMap {
-        "hs-grid": HTMLHsGridElement;
-        "hs-grid-column": HTMLHsGridColumnElement;
-        "hs-tab": HTMLHsTabElement;
-        "hs-tab-list": HTMLHsTabListElement;
-        "hs-tab-panel": HTMLHsTabPanelElement;
-        "hs-tab-panels": HTMLHsTabPanelsElement;
-        "hs-tabs": HTMLHsTabsElement;
         "onyx-alert": HTMLOnyxAlertElement;
         "onyx-box": HTMLOnyxBoxElement;
         "onyx-button": HTMLOnyxButtonElement;
         "onyx-callout": HTMLOnyxCalloutElement;
         "onyx-checkbox": HTMLOnyxCheckboxElement;
         "onyx-checkbox-group": HTMLOnyxCheckboxGroupElement;
+        "onyx-grid": HTMLOnyxGridElement;
+        "onyx-grid-column": HTMLOnyxGridColumnElement;
         "onyx-header": HTMLOnyxHeaderElement;
         "onyx-input": HTMLOnyxInputElement;
         "onyx-list": HTMLOnyxListElement;
@@ -308,30 +303,15 @@ declare global {
         "onyx-radio": HTMLOnyxRadioElement;
         "onyx-radio-group": HTMLOnyxRadioGroupElement;
         "onyx-stack": HTMLOnyxStackElement;
+        "onyx-tab": HTMLOnyxTabElement;
+        "onyx-tab-list": HTMLOnyxTabListElement;
+        "onyx-tab-panel": HTMLOnyxTabPanelElement;
+        "onyx-tab-panels": HTMLOnyxTabPanelsElement;
+        "onyx-tabs": HTMLOnyxTabsElement;
         "onyx-textarea": HTMLOnyxTextareaElement;
     }
 }
 declare namespace LocalJSX {
-    interface HsGrid {
-        "columns"?: number;
-    }
-    interface HsGridColumn {
-    }
-    interface HsTab {
-        "onTabClick"?: (event: HsTabCustomEvent<any>) => void;
-    }
-    interface HsTabList {
-    }
-    interface HsTabPanel {
-    }
-    interface HsTabPanels {
-    }
-    interface HsTabs {
-        /**
-          * Configures the tab/panels to select by default upon loading.
-         */
-        "selectedIndex"?: number;
-    }
     interface OnyxAlert {
         "content"?: string;
         "type"?: 'neutral' | 'success' | 'error' | 'warning';
@@ -386,6 +366,11 @@ declare namespace LocalJSX {
           * Default selected value, which will check the matching checkbox element(s).
          */
         "selectedValues"?: any;
+    }
+    interface OnyxGrid {
+        "columns"?: number;
+    }
+    interface OnyxGridColumn {
     }
     interface OnyxHeader {
         /**
@@ -446,6 +431,21 @@ declare namespace LocalJSX {
          */
         "orientation"?: Orientation;
     }
+    interface OnyxTab {
+        "onTabClick"?: (event: OnyxTabCustomEvent<any>) => void;
+    }
+    interface OnyxTabList {
+    }
+    interface OnyxTabPanel {
+    }
+    interface OnyxTabPanels {
+    }
+    interface OnyxTabs {
+        /**
+          * Configures the tab/panels to select by default upon loading.
+         */
+        "selectedIndex"?: number;
+    }
     interface OnyxTextarea {
         "disabled"?: boolean;
         "hasError"?: boolean;
@@ -458,19 +458,14 @@ declare namespace LocalJSX {
         "value"?: string;
     }
     interface IntrinsicElements {
-        "hs-grid": HsGrid;
-        "hs-grid-column": HsGridColumn;
-        "hs-tab": HsTab;
-        "hs-tab-list": HsTabList;
-        "hs-tab-panel": HsTabPanel;
-        "hs-tab-panels": HsTabPanels;
-        "hs-tabs": HsTabs;
         "onyx-alert": OnyxAlert;
         "onyx-box": OnyxBox;
         "onyx-button": OnyxButton;
         "onyx-callout": OnyxCallout;
         "onyx-checkbox": OnyxCheckbox;
         "onyx-checkbox-group": OnyxCheckboxGroup;
+        "onyx-grid": OnyxGrid;
+        "onyx-grid-column": OnyxGridColumn;
         "onyx-header": OnyxHeader;
         "onyx-input": OnyxInput;
         "onyx-list": OnyxList;
@@ -478,6 +473,11 @@ declare namespace LocalJSX {
         "onyx-radio": OnyxRadio;
         "onyx-radio-group": OnyxRadioGroup;
         "onyx-stack": OnyxStack;
+        "onyx-tab": OnyxTab;
+        "onyx-tab-list": OnyxTabList;
+        "onyx-tab-panel": OnyxTabPanel;
+        "onyx-tab-panels": OnyxTabPanels;
+        "onyx-tabs": OnyxTabs;
         "onyx-textarea": OnyxTextarea;
     }
 }
@@ -485,19 +485,14 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "hs-grid": LocalJSX.HsGrid & JSXBase.HTMLAttributes<HTMLHsGridElement>;
-            "hs-grid-column": LocalJSX.HsGridColumn & JSXBase.HTMLAttributes<HTMLHsGridColumnElement>;
-            "hs-tab": LocalJSX.HsTab & JSXBase.HTMLAttributes<HTMLHsTabElement>;
-            "hs-tab-list": LocalJSX.HsTabList & JSXBase.HTMLAttributes<HTMLHsTabListElement>;
-            "hs-tab-panel": LocalJSX.HsTabPanel & JSXBase.HTMLAttributes<HTMLHsTabPanelElement>;
-            "hs-tab-panels": LocalJSX.HsTabPanels & JSXBase.HTMLAttributes<HTMLHsTabPanelsElement>;
-            "hs-tabs": LocalJSX.HsTabs & JSXBase.HTMLAttributes<HTMLHsTabsElement>;
             "onyx-alert": LocalJSX.OnyxAlert & JSXBase.HTMLAttributes<HTMLOnyxAlertElement>;
             "onyx-box": LocalJSX.OnyxBox & JSXBase.HTMLAttributes<HTMLOnyxBoxElement>;
             "onyx-button": LocalJSX.OnyxButton & JSXBase.HTMLAttributes<HTMLOnyxButtonElement>;
             "onyx-callout": LocalJSX.OnyxCallout & JSXBase.HTMLAttributes<HTMLOnyxCalloutElement>;
             "onyx-checkbox": LocalJSX.OnyxCheckbox & JSXBase.HTMLAttributes<HTMLOnyxCheckboxElement>;
             "onyx-checkbox-group": LocalJSX.OnyxCheckboxGroup & JSXBase.HTMLAttributes<HTMLOnyxCheckboxGroupElement>;
+            "onyx-grid": LocalJSX.OnyxGrid & JSXBase.HTMLAttributes<HTMLOnyxGridElement>;
+            "onyx-grid-column": LocalJSX.OnyxGridColumn & JSXBase.HTMLAttributes<HTMLOnyxGridColumnElement>;
             "onyx-header": LocalJSX.OnyxHeader & JSXBase.HTMLAttributes<HTMLOnyxHeaderElement>;
             "onyx-input": LocalJSX.OnyxInput & JSXBase.HTMLAttributes<HTMLOnyxInputElement>;
             "onyx-list": LocalJSX.OnyxList & JSXBase.HTMLAttributes<HTMLOnyxListElement>;
@@ -505,6 +500,11 @@ declare module "@stencil/core" {
             "onyx-radio": LocalJSX.OnyxRadio & JSXBase.HTMLAttributes<HTMLOnyxRadioElement>;
             "onyx-radio-group": LocalJSX.OnyxRadioGroup & JSXBase.HTMLAttributes<HTMLOnyxRadioGroupElement>;
             "onyx-stack": LocalJSX.OnyxStack & JSXBase.HTMLAttributes<HTMLOnyxStackElement>;
+            "onyx-tab": LocalJSX.OnyxTab & JSXBase.HTMLAttributes<HTMLOnyxTabElement>;
+            "onyx-tab-list": LocalJSX.OnyxTabList & JSXBase.HTMLAttributes<HTMLOnyxTabListElement>;
+            "onyx-tab-panel": LocalJSX.OnyxTabPanel & JSXBase.HTMLAttributes<HTMLOnyxTabPanelElement>;
+            "onyx-tab-panels": LocalJSX.OnyxTabPanels & JSXBase.HTMLAttributes<HTMLOnyxTabPanelsElement>;
+            "onyx-tabs": LocalJSX.OnyxTabs & JSXBase.HTMLAttributes<HTMLOnyxTabsElement>;
             "onyx-textarea": LocalJSX.OnyxTextarea & JSXBase.HTMLAttributes<HTMLOnyxTextareaElement>;
         }
     }

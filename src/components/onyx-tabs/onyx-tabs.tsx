@@ -1,7 +1,7 @@
 import { Component, Host, h, Listen, Element, Prop } from '@stencil/core';
 
 /**
- * The `<hs-tabs />` component provides a convenient wrapper for tabbed navigation,
+ * The `<onyx-tabs />` component provides a convenient wrapper for tabbed navigation,
  * displaying a top nav with tab links that will toggle on or off each corresponding
  * tabbed view matching their index. Eg: clicking on the first tab will display the first
  * panel, and so on. The component supports pre-selecting a tab of your choice. If the index
@@ -10,29 +10,29 @@ import { Component, Host, h, Listen, Element, Prop } from '@stencil/core';
  * ### Example
  * 
  * ```html
- *  <hs-tabs>
- *    <hs-tab-list>
- *      <hs-tab>Tab 1</hs-tab>
- *      <hs-tab>Tab 2</hs-tab>
- *    </hs-tab-list>
- *    <hs-tab-panels>
- *      <hs-tab-panel>
- *        <hs-header>Tab 1 content</hs-header>
- *      </hs-tab-panel>
- *      <hs-tab-panel>
- *        <hs-header>Tab 2 content</hs-header>
- *      </hs-tab-panel>
- *    </hs-tab-panels>
- *  </hs-tabs>
+ *  <onyx-tabs>
+ *    <onyx-tab-list>
+ *      <onyx-tab>Tab 1</onyx-tab>
+ *      <onyx-tab>Tab 2</onyx-tab>
+ *    </onyx-tab-list>
+ *    <onyx-tab-panels>
+ *      <onyx-tab-panel>
+ *        <onyx-header>Tab 1 content</onyx-header>
+ *      </onyx-tab-panel>
+ *      <onyx-tab-panel>
+ *        <onyx-header>Tab 2 content</onyx-header>
+ *      </onyx-tab-panel>
+ *    </onyx-tab-panels>
+ *  </onyx-tabs>
  * ````
  *
- * Annotating the top element as `<hs-tabs selected-index="1">` would have displayed the second tab/panel by default.
+ * Annotating the top element as `<onyx-tabs selected-index="1">` would have displayed the second tab/panel by default.
  */
 @Component({
-  tag: 'hs-tabs',
+  tag: 'onyx-tabs',
   shadow: false,
 })
-export class HsTabs {
+export class OnyxTabs {
   tabs = [];
   tabPanels = [];
 
@@ -54,8 +54,8 @@ export class HsTabs {
   }
 
   componentWillLoad() {
-    this.tabs = Array.from(this.el.querySelectorAll('hs-tab'));
-    this.tabPanels = Array.from(this.el.querySelectorAll('hs-tab-panel'));
+    this.tabs = Array.from(this.el.querySelectorAll('onyx-tab'));
+    this.tabPanels = Array.from(this.el.querySelectorAll('onyx-tab-panel'));
 
     const selectedTabIndex = this.selectedIndex < this.tabPanels.length ? this.selectedIndex : 0;
     

@@ -11,37 +11,37 @@ export default {
 };
 
 const Template = args => `
-  <hs-tabs selected-index="${args.selectedIndex}">
-    <hs-tab-list>
-      <hs-tab>Episode 1</hs-tab>
-      <hs-tab>Episode 2</hs-tab>
-      <hs-tab>Episode 3</hs-tab>
-      <hs-tab>Episode 4</hs-tab>
-      <hs-tab>Episode 5</hs-tab>
-    </hs-tab-list>
-    <hs-tab-panels>
-      <hs-tab-panel>
-        <hs-header level="2">Episode 1</hs-header>
+  <onyx-tabs selected-index="${args.selectedIndex}">
+    <onyx-tab-list>
+      <onyx-tab>Episode 1</onyx-tab>
+      <onyx-tab>Episode 2</onyx-tab>
+      <onyx-tab>Episode 3</onyx-tab>
+      <onyx-tab>Episode 4</onyx-tab>
+      <onyx-tab>Episode 5</onyx-tab>
+    </onyx-tab-list>
+    <onyx-tab-panels>
+      <onyx-tab-panel>
+        <onyx-header level="2">Episode 1</onyx-header>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-      </hs-tab-panel>
-      <hs-tab-panel>
-        <hs-header level="2">Episode 2</hs-header>
+      </onyx-tab-panel>
+      <onyx-tab-panel>
+        <onyx-header level="2">Episode 2</onyx-header>
         <p>Sed erat nulla, vulputate in turpis quis, dignissim vestibulum magna. Aliquam eleifend mauris id vulputate sollicitudin. </p>
-      </hs-tab-panel>
-      <hs-tab-panel>
-        <hs-header level="2">Episode 3</hs-header>
+      </onyx-tab-panel>
+      <onyx-tab-panel>
+        <onyx-header level="2">Episode 3</onyx-header>
         <p>Morbi gravida lobortis metus ac feugiat. Aliquam ut lacinia lacus. Morbi ullamcorper venenatis dui vel maximus. In malesuada tortor ligula</p>
-      </hs-tab-panel>
-      <hs-tab-panel>
-        <hs-header level="2">Episode 4</hs-header>
+      </onyx-tab-panel>
+      <onyx-tab-panel>
+        <onyx-header level="2">Episode 4</onyx-header>
         <p>Vivamus vestibulum nisl congue mattis pretium. Aenean lacinia nibh at pharetra blandit. </p>
-      </hs-tab-panel>
-      <hs-tab-panel>
-        <hs-header level="2">Episode 5</hs-header>
+      </onyx-tab-panel>
+      <onyx-tab-panel>
+        <onyx-header level="2">Episode 5</onyx-header>
         <p>Integer non est porta, malesuada neque quis, rutrum orci. Sed tempus metus sed nisi tempor, in condimentum tellus rutrum.</p>
-      </hs-tab-panel>
-    </hs-tab-panels>
-  </hs-tabs>
+      </onyx-tab-panel>
+    </onyx-tab-panels>
+  </onyx-tabs>
 `;
 
 export const TabsStories = Template.bind({});

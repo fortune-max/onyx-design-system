@@ -1,16 +1,16 @@
 import { Component, h } from '@stencil/core';
 
 @Component({
-  tag: 'hs-grid-column',
-  styleUrl: 'hs-grid.css',
+  tag: 'onyx-grid-column',
+  styleUrl: 'onyx-grid.css',
   shadow: false,
   scoped: false,
 })
-export class HsGridColumn {
+export class OnyxGridColumn {
 
   render() {
     return (
-      <div class="hs-grid-column">
+      <div class="onyx-grid-column">
         <slot></slot>
       </div>
     );

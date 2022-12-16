@@ -2,12 +2,12 @@ import { Component, h, Prop } from '@stencil/core';
 import { css } from '@emotion/css';
 
 @Component({
-  tag: 'hs-grid',
-  styleUrl: 'hs-grid.css',
+  tag: 'onyx-grid',
+  styleUrl: 'onyx-grid.css',
   shadow: false,
   scoped: true,
 })
-export class HsGrid {
+export class OnyxGrid {
 
   @Prop({ reflect: true })
   columns = 12;
@@ -28,7 +28,7 @@ export class HsGrid {
     `;
 
     return (
-      <div class={`hs-grid ${gridStyle}`}>
+      <div class={`onyx-grid ${gridStyle}`}>
         <slot></slot>
         <span class={gridBuffer}></span>
       </div>

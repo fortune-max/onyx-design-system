@@ -2,10 +2,10 @@ import { Component, h } from '@stencil/core';
 import { css } from '@emotion/css';
 
 @Component({
-  tag: 'hs-tab-list',
+  tag: 'onyx-tab-list',
   shadow: false,
 })
-export class HsTabList {
+export class OnyxTabList {
   render() {
     const tabListStyles = css`
       box-shadow: inset 0px -18px 0px -17px #ccc;
