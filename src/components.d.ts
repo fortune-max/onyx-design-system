@@ -7,7 +7,6 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface OnyxAlert {
-        "content": string;
         "type": 'neutral' | 'success' | 'error' | 'warning';
     }
     interface OnyxBox {
@@ -313,7 +312,6 @@ declare global {
 }
 declare namespace LocalJSX {
     interface OnyxAlert {
-        "content"?: string;
         "type"?: 'neutral' | 'success' | 'error' | 'warning';
     }
     interface OnyxBox {

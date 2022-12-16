@@ -6,8 +6,7 @@ import { Component, Host, h, Prop } from '@stencil/core';
   shadow: true,
 })
 export class OnyxAlert {
-  @Prop({ reflect: true }) content: string;
-
+  
   @Prop({ reflect: true }) type: 'neutral' | 'success' | 'error' | 'warning' = 'neutral';
 
   render() {
@@ -25,7 +24,7 @@ export class OnyxAlert {
                 />
               </svg>
             </div>
-            <span>{this.content}</span>
+            <slot></slot>
           </div>
         </div>
       </Host>

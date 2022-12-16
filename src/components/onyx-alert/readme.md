@@ -7,10 +7,9 @@
 
 ## Properties
 
-| Property  | Attribute | Description | Type                                             | Default     |
-| --------- | --------- | ----------- | ------------------------------------------------ | ----------- |
-| `content` | `content` |             | `string`                                         | `undefined` |
-| `type`    | `type`    |             | `"error" \| "neutral" \| "success" \| "warning"` | `'neutral'` |
+| Property | Attribute | Description | Type                                             | Default     |
+| -------- | --------- | ----------- | ------------------------------------------------ | ----------- |
+| `type`   | `type`    |             | `"error" \| "neutral" \| "success" \| "warning"` | `'neutral'` |
 
 
 ----------------------------------------------

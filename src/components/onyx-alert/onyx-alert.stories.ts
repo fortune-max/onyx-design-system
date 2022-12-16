@@ -14,8 +14,7 @@ export default {
 
 const Template = args => `
     <onyx-alert 
-      content="${args.content}" 
-      type="${args.type}"></onyx-alert>`;
+      type="${args.type}">${args.content}</onyx-alert>`;
 
 export const AlertStory = Template.bind({});
 AlertStory.args = {
