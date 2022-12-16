@@ -1,0 +1,57 @@
+import { Meta } from '@storybook/addon-docs';
+import Code from './assets/code-brackets.svg';
+import Colors from './assets/colors.svg';
+import Comments from './assets/comments.svg';
+import Direction from './assets/direction.svg';
+import Flow from './assets/flow.svg';
+import Plugin from './assets/plugin.svg';
+import Repo from './assets/repo.svg';
+import StackAlt from './assets/stackalt.svg';
+import HeaderIntroFoundations from './assets/header_intro_foundations.png';
+
+<Meta title="Principles/Foundations - Introduction" />
+
+<style>
+  {`
+    main {
+      padding: 0 40px;
+      
+    }
+    .page-wrapper {
+      border: 1px solid black;
+      padding-bottom: 40px;
+    }
+    
+  `}
+</style>
+
+<div className="page-wrapper">
+  <header>
+    <img src={HeaderIntroFoundations} />
+  </header>
+  <main>
+    <h3>Who is Marriott?</h3>
+    <p>Marriott is a chain of luxurious hotels all around the world and is also the parent of many such hotels chains. Ex. Haytt, Sheraton.</p>
+
+    <h3>Who is the target audience?</h3>
+    <onyx-list as="ul">
+      <onyx-list-item>Over-the-road travellers</onyx-list-item>
+      <onyx-list-item>Luxury travellers</onyx-list-item>
+      <onyx-list-item>Corporates that conduct meetings</onyx-list-item>
+      <onyx-list-item>Targeted at people needing month-long accommodations</onyx-list-item>
+    </onyx-list>
+
+    <h4>CLARITY</h4>
+    <p>Marriott interface should be a peaceful atmosphere that brings out the excitement of people. 
+    The people should not feel overwhelmed with content. The cluttered interface is the source of stress and distractions. Eliminate ambiguity. Enable people to see, understand, and act with confidence.</p>
+    <h4>INCLUSIVITY</h4>
+    <p>We cater to the world and thus its very important for everyone to feel welcome.
+      Accessibility for the major cultures and languages would make the everyone happy in their journey in booking a stay in the global brand that we are.</p>
+    <h4>KEEP IT SIMPLE (LESS IS MORE)</h4>
+    <p>While looking for a hotel room the users visual representation would we more helpful rather that large amount of text. This also makes it a lot easier for the users the make decisions while they are going about the website.
+      Certain guidelines have to be followed so that the webpage doesn't feel cluttered.</p>
+    <h4>DRIVE DISCOVERY</h4>
+    <p>The journey's as important as the destination. We want to make this process of finding their perfect stay to be joyful and drive the imagination of the people while they imagine how their experiences would be like at different places.</p>
+    <p>Bringing joy and excitement for the otherwise stressful process of booking a stay.</p>
+  </main>
+</div>
