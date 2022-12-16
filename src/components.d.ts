@@ -140,6 +140,17 @@ export namespace Components {
          */
         "orientation": Orientation;
     }
+    interface OnyxTextarea {
+        "disabled": boolean;
+        "hasError": boolean;
+        "hint": string;
+        "label": string;
+        "maxChars": number;
+        "name": string;
+        "placeholder": string;
+        "readonly": boolean;
+        "value": string;
+    }
 }
 export interface HsTabCustomEvent<T> extends CustomEvent<T> {
     detail: T;
@@ -270,6 +281,12 @@ declare global {
         prototype: HTMLOnyxStackElement;
         new (): HTMLOnyxStackElement;
     };
+    interface HTMLOnyxTextareaElement extends Components.OnyxTextarea, HTMLStencilElement {
+    }
+    var HTMLOnyxTextareaElement: {
+        prototype: HTMLOnyxTextareaElement;
+        new (): HTMLOnyxTextareaElement;
+    };
     interface HTMLElementTagNameMap {
         "hs-grid": HTMLHsGridElement;
         "hs-grid-column": HTMLHsGridColumnElement;
@@ -291,6 +308,7 @@ declare global {
         "onyx-radio": HTMLOnyxRadioElement;
         "onyx-radio-group": HTMLOnyxRadioGroupElement;
         "onyx-stack": HTMLOnyxStackElement;
+        "onyx-textarea": HTMLOnyxTextareaElement;
     }
 }
 declare namespace LocalJSX {
@@ -428,6 +446,17 @@ declare namespace LocalJSX {
          */
         "orientation"?: Orientation;
     }
+    interface OnyxTextarea {
+        "disabled"?: boolean;
+        "hasError"?: boolean;
+        "hint"?: string;
+        "label"?: string;
+        "maxChars"?: number;
+        "name"?: string;
+        "placeholder"?: string;
+        "readonly"?: boolean;
+        "value"?: string;
+    }
     interface IntrinsicElements {
         "hs-grid": HsGrid;
         "hs-grid-column": HsGridColumn;
@@ -449,6 +478,7 @@ declare namespace LocalJSX {
         "onyx-radio": OnyxRadio;
         "onyx-radio-group": OnyxRadioGroup;
         "onyx-stack": OnyxStack;
+        "onyx-textarea": OnyxTextarea;
     }
 }
 export { LocalJSX as JSX };
@@ -475,6 +505,7 @@ declare module "@stencil/core" {
             "onyx-radio": LocalJSX.OnyxRadio & JSXBase.HTMLAttributes<HTMLOnyxRadioElement>;
             "onyx-radio-group": LocalJSX.OnyxRadioGroup & JSXBase.HTMLAttributes<HTMLOnyxRadioGroupElement>;
             "onyx-stack": LocalJSX.OnyxStack & JSXBase.HTMLAttributes<HTMLOnyxStackElement>;
+            "onyx-textarea": LocalJSX.OnyxTextarea & JSXBase.HTMLAttributes<HTMLOnyxTextareaElement>;
         }
     }
 }
