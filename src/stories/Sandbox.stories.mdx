@@ -1,0 +1,85 @@
+import { Meta } from '@storybook/addon-docs';
+import Code from './assets/code-brackets.svg';
+import Colors from './assets/colors.svg';
+import Comments from './assets/comments.svg';
+import Direction from './assets/direction.svg';
+import Flow from './assets/flow.svg';
+import Plugin from './assets/plugin.svg';
+import Repo from './assets/repo.svg';
+import StackAlt from './assets/stackalt.svg';
+import HeaderDefault from './assets/header_default.png';
+
+<Meta title="Principles/Sandbox" />
+
+<style>
+  {`
+    main {
+      padding: 0 40px;
+      
+    }
+    .page-wrapper {
+      border: 1px solid black;
+      padding-bottom: 40px;
+    }
+    .top {
+      height: 50vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .bottom {
+      height: 50vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+    textarea {
+      display: block;
+      font-family: monospace;
+    }
+
+    #renderBox {
+      width: 400px;
+      height: 400px;
+      border: 1px solid black;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    #renderedComponent {
+      overflow: scroll;
+    }
+  `}
+</style>
+
+<div className="page-wrapper">
+  <header>
+    <img src={HeaderDefault} />
+  </header>
+  <main>
+    <div class="top">
+      <p>Rendered component</p>
+      <div id="renderBox">
+        <div id="renderedComponent"></div>
+      </div>
+    </div>
+    <div class="bottom">
+      <textarea id="codetorun" name="codetorun" rows="22" cols="130">&lt;onyx-box gap=&quot;17px&quot;&gt;
+        &lt;onyx-button variant=&quot;neutral&quot;&gt;Neutral&lt;/onyx-button&gt;
+        &lt;onyx-button variant=&quot;warning&quot;&gt;Warning&lt;/onyx-button&gt;
+        &lt;onyx-button variant=&quot;error&quot;&gt;Error&lt;/onyx-button&gt;
+        &lt;onyx-button variant=&quot;success&quot;&gt;Success&lt;/onyx-button&gt;
+    &lt;/onyx-box&gt;</textarea>
+      <onyx-button onclick="(
+        function (){
+          document.getElementById('renderedComponent').innerHTML = document.getElementById('codetorun').value;
+          })()">Run</onyx-button>
+    </div>
+  </main>
+</div>
