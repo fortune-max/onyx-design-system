@@ -1,6 +1,6 @@
 import { Component, h, Prop, Element } from '@stencil/core';
 import { css } from '@emotion/css';
-import { ColorPrimary, ColorBody, FontHeading1 } from '../../design-tokens/js/variables.js';
+import { FontHeading1 } from '../../design-tokens/js/variables.js';
 
 /**
  * Use this array as a pivotal collection of Host attributes to remove.
@@ -119,7 +119,6 @@ export class OnyxHeader {
      * way to implement dynamic CSS based on component logic or external tokens.
      */
     const tagStyles = css`
-      color: ${this.level === 1 ? ColorPrimary : ColorBody};
       font-size: ${this.level === 1 ? `${FontHeading1.fontSize}px` : undefined};
       text-align: ${this.textAlign};
     `;

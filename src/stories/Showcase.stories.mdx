@@ -1,0 +1,87 @@
+import { Meta } from '@storybook/addon-docs';
+import Code from './assets/code-brackets.svg';
+import Colors from './assets/colors.svg';
+import Comments from './assets/comments.svg';
+import Direction from './assets/direction.svg';
+import Flow from './assets/flow.svg';
+import Plugin from './assets/plugin.svg';
+import Repo from './assets/repo.svg';
+import StackAlt from './assets/stackalt.svg';
+import HeaderDefault from './assets/header_default.png';
+import ImgChoice2Good from './assets/img-choice-2-good.png';
+
+<Meta title="Principles/Showcase" />
+
+<style>
+  {`
+    @font-face {
+      font-family: 'DejaVuSansMono';
+      src: url(./assets/DejaVuSansMono.ttf);
+    }
+    main {
+      padding: 0 40px;
+      
+    }
+    .page-wrapper {
+      border: 1px solid black;
+      padding-bottom: 40px;
+    }
+
+    .showcaseContainer {
+      display: flex;
+      padding: 20px;
+      gap: 30px;
+    }
+
+    .codeBox {
+      border-radius: 10px;
+      background-color: slategrey;
+      font-family: 'DejaVuSansMono';
+      padding: 20px;
+      width: 30vw;
+    }
+
+    .displayBox {
+      border-radius: 10px;
+      padding: 20px;
+      background-color: #d9d9d9;
+      width: 30vw;
+      display: flex;
+      justify-content: center;
+    }
+
+    onyx-input {
+      padding: 10px;
+      width: inherit;
+    }
+    
+    .exampleImg {
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      height: 340px;
+    }
+
+  `}
+</style>
+
+<div className="page-wrapper">
+  <header>
+    <img src={HeaderDefault} />
+  </header>
+  <main>
+    <div className="showcaseContainer">
+      <div className="displayBox">
+        <onyx-box border-radius="5px" border="1px solid black" background-color="white">
+          <img src={ImgChoice2Good} className="exampleImg"/>
+          <br/>
+          <onyx-header level="4">Where to next?</onyx-header>
+          
+          <p>Your adventure awaits!</p>
+        </onyx-box>
+      </div>
+      <div className="showcaseBox">
+        
+      </div>
+    </div>
+  </main>
+</div>
