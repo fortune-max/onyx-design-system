@@ -1,0 +1,129 @@
+import { Meta } from '@storybook/addon-docs';
+import Code from './assets/code-brackets.svg';
+import Colors from './assets/colors.svg';
+import Comments from './assets/comments.svg';
+import Direction from './assets/direction.svg';
+import Flow from './assets/flow.svg';
+import Plugin from './assets/plugin.svg';
+import Repo from './assets/repo.svg';
+import StackAlt from './assets/stackalt.svg';
+
+import HeaderFoundationsVoiceAndTone from './assets/header_foundations_voice_and_tone.png';
+
+import Tone1Bad from './assets/tone-1-bad.png';
+import Tone1Good from './assets/tone-1-good.png';
+
+import Tone2Bad from './assets/tone-2-bad.png';
+import Tone2Good from './assets/tone-2-good.png';
+
+import Tone3Bad from './assets/tone-3-bad.png';
+import Tone3Good from './assets/tone-3-good.png';
+
+import Tone4Bad from './assets/tone-4-bad.png';
+import Tone4Good from './assets/tone-4-good.png';
+
+<Meta title="Principles/Foundations - Voice and Tone" />
+<style>
+  {`
+    main {
+      padding: 0 40px;
+      
+    }
+    .page-wrapper {
+      border: 1px solid black;
+      padding-bottom: 40px;
+    }
+    
+    .imageCmp {
+      display: flex;
+      gap: 30px;
+      margin-bottom: 30px;
+    }
+
+    .imageCmp img {
+      width: 30%;
+    }
+    
+  `}
+</style>
+
+<div className="page-wrapper">
+  <header>
+    <img src={HeaderFoundationsVoiceAndTone} />
+  </header>
+  <main>
+    <h2>What is Voice and Tone?</h2>
+    <p><strong>Voice</strong> is the foundation of every written or spoken communication. </p>
+    
+    <p><strong>Tone</strong> is how you modify what you say to convey emotion or intent.<br/>
+      Tone enables you to choose <strong>words, structures, punctuation, or syntax appropriate to the scenario</strong>.</p>
+
+    <h4>The Marriott Voice is how we sound in writing or out loud.</h4>
+
+    <p>The characteristics of our voice don’t change. </p>
+
+    <p>Marriott is synonymous with</p>
+
+    <h5>Professionalism</h5>
+    <onyx-list as="ul">
+      <onyx-list-item>We want our customers to feel respected when they enter our ecosystem.</onyx-list-item>
+      <onyx-list-item>It is important to use the appropriate language while addressing our customers.</onyx-list-item>
+      <onyx-list-item>Respect & feeling of security is an important aspect for them.</onyx-list-item>
+    </onyx-list>
+
+    <h5>Luxury</h5>
+    Our brand is associated with luxury and so does our users expect that from us.
+    <onyx-list as="ul">
+      <onyx-list-item>Use a minimalistic approach.</onyx-list-item>
+      <onyx-list-item>Don't try too hard to feel luxurious, trying too hard can have the opposite effect.</onyx-list-item>
+    </onyx-list>
+    
+    <h5>Excellence</h5>
+    We strive for excellence in our service and our products. We should solve our customers problems even before they complain about it.
+    <onyx-list as="ul">
+      <onyx-list-item>We give personalised experiences.</onyx-list-item>
+      <onyx-list-item>Dive custom experiences that make it easy for people to choose.</onyx-list-item>
+    </onyx-list>
+    
+    <p><strong>Tone</strong> is used to modify how we communicate, according to the scenario and the user’s situation.</p>
+
+    <strong>What we want our user to feel</strong>
+    <onyx-list as="ul">
+      <onyx-list-item>Excitement</onyx-list-item>
+      <onyx-list-item>Open</onyx-list-item>
+      <onyx-list-item>Included</onyx-list-item>
+    </onyx-list>
+
+    <h4>Excitement</h4>
+    <p>Making the experience of booking travel stays exciting.</p>
+
+    <div className="imageCmp">
+      <img src={Tone1Bad} />
+      <img src={Tone1Good} />
+    </div>
+
+    <div className="imageCmp">
+      <img src={Tone2Bad} />
+      <img src={Tone2Good} />
+    </div>
+
+    <h4>Tonal Qualities</h4>
+    <h4>Open</h4>
+    <p>Give breathing space for the customers. we do not want them to be
+    overwhelmed with content.<br/>No need to given an over explanation when the same can be done in just a few words.</p>
+
+    <div className="imageCmp">
+      <img src={Tone3Bad} />
+      <img src={Tone3Good} />
+    </div>
+
+    <h4>Included</h4>
+    <p>Use words that make our customers included. Do not use imperative sentences while addressing our customers.<br/>
+      Use words like <strong>we</strong>, this makes our customers more relaxed as they realise that we would take care of them, like we take care of ourselvers</p>
+
+    <div className="imageCmp">
+      <img src={Tone4Bad} />
+      <img src={Tone4Good} />
+    </div>
+  </main>
+</div>
