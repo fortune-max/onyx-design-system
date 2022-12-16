@@ -16,6 +16,16 @@ h4 {
   margin: 0;
 }
 
+.icon {
+  margin-right: 8px !important;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .container.neutral {
   border-color: var(--onyx-color-primary);
 }
@@ -25,12 +35,24 @@ h4 {
   background-color: #f8eaea;
 }
 
+.container.error .icon path {
+  fill: var(--onyx-color-error);
+}
+
 .container.success {
   border-color: var(--onyx-color-success);
   background-color: #ecfbe9;
 }
 
+.container.success .icon path {
+  fill: var(--onyx-color-success);
+}
+
 .container.warning {
   border-color: var(--onyx-color-warning);
   background-color: #fdf6ec;
+}
+
+.container.warning .icon path {
+  fill: var(--onyx-color-warning);
 }
