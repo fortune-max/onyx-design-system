@@ -22,6 +22,14 @@ import Tone3Good from './assets/tone-3-good.png';
 import Tone4Bad from './assets/tone-4-bad.png';
 import Tone4Good from './assets/tone-4-good.png';
 
+import ImgChoice1Bad from './assets/img-choice-1-bad.png';
+import ImgChoice1Good from './assets/img-choice-1-good.png';
+import ImgChoice2Bad from './assets/img-choice-2-bad.png';
+import ImgChoice2Good from './assets/img-choice-2-good.png';
+
+import BadTick from './assets/cross-bad.png';
+import GoodTick from './assets/tick-good.png';
+
 <Meta title="Principles/Foundations - Voice and Tone" />
 <style>
   {`
@@ -40,8 +48,35 @@ import Tone4Good from './assets/tone-4-good.png';
       margin-bottom: 30px;
     }
 
-    .imageCmp img {
+    .imageCmp2 {
+      display: flex;
+      /* gap: 10px; */
+      width: 70%;
+    }
+
+    .cmpImgText {
       width: 30%;
+    }
+
+    .imgContainer {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .exampleImg {
+      padding-left: 30px;
+      width: 275px;
+      height: 206px;
+    }
+
+    .exampleImg2 {
+      width: 80%;
+    }
+
+    .tick {
+      width: 18px;
     }
     
   `}
@@ -98,13 +133,13 @@ import Tone4Good from './assets/tone-4-good.png';
     <p>Making the experience of booking travel stays exciting.</p>
 
     <div className="imageCmp">
-      <img src={Tone1Bad} />
-      <img src={Tone1Good} />
+      <img src={Tone1Bad} className="cmpImgText"/>
+      <img src={Tone1Good} className="cmpImgText"/>
     </div>
 
     <div className="imageCmp">
-      <img src={Tone2Bad} />
-      <img src={Tone2Good} />
+      <img src={Tone2Bad} className="cmpImgText"/>
+      <img src={Tone2Good} className="cmpImgText"/>
     </div>
 
     <h4>Tonal Qualities</h4>
@@ -113,8 +148,8 @@ import Tone4Good from './assets/tone-4-good.png';
     overwhelmed with content.<br/>No need to given an over explanation when the same can be done in just a few words.</p>
 
     <div className="imageCmp">
-      <img src={Tone3Bad} />
-      <img src={Tone3Good} />
+      <img src={Tone3Bad} className="cmpImgText"/>
+      <img src={Tone3Good} className="cmpImgText"/>
     </div>
 
     <h4>Included</h4>
@@ -122,8 +157,39 @@ import Tone4Good from './assets/tone-4-good.png';
       Use words like <strong>we</strong>, this makes our customers more relaxed as they realise that we would take care of them, like we take care of ourselvers</p>
 
     <div className="imageCmp">
-      <img src={Tone4Bad} />
-      <img src={Tone4Good} />
+      <img src={Tone4Bad} className="cmpImgText"/>
+      <img src={Tone4Good} className="cmpImgText"/>
     </div>
+
+    <h4>How to choose images</h4>
+
+    <p>Use good quality images</p>
+
+    <div className="imageCmp">
+      <div className="imgContainer">
+        <img src={ImgChoice1Good} className="exampleImg"/>
+        <img src={GoodTick} className="tick"/>
+      </div>
+
+      <div className="imgContainer">
+        <img src={ImgChoice1Bad} className="exampleImg"/>
+        <img src={BadTick} className="tick"/>
+      </div>
+    </div>
+
+    <p>Use minimal images that give a sense and space with a positive messege</p>
+
+    <div className="imageCmp2">
+      <div className="imgContainer">
+        <img src={ImgChoice2Good} className="exampleImg2"/>
+        <img src={GoodTick} className="tick"/>
+      </div>
+
+      <div className="imgContainer">
+        <img src={ImgChoice2Bad} className="exampleImg2"/>
+        <img src={BadTick} className="tick"/>
+      </div>
+    </div>
+
   </main>
 </div>
