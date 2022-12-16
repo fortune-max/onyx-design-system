@@ -47,5 +47,6 @@ BoxStory.args = {
   justifyContent: 'center',
   gap: '10px',
   as: 'span',
+  flexDirection: 'column',
   content: 'This is a 100px x 100px box element',
 };

@@ -39,6 +39,7 @@ export namespace Components {
         "border": string;
         "borderRadius": string;
         "display": "flex" | "grid" | "none" | "block" | "inline-block" | "inline-flex";
+        "flexDirection": "row" | "column";
         "gap": string;
         "height": string;
         "justifyContent": "center" | "flex-start" | "flex-end" | "space-around" | "space-between" | "space-evenly";
@@ -55,6 +56,8 @@ export namespace Components {
         "actionType": string;
         "header": string;
         "type": 'neutral' | 'success' | 'error' | 'warning';
+    }
+    interface OnyxCard {
     }
     interface OnyxCheckbox {
         /**
@@ -128,6 +131,9 @@ export namespace Components {
           * Default value, which will preselect the matching radio element.
          */
         "selectedValue": any;
+    }
+    interface OnyxSeparator {
+        "horizontalPadding": number;
     }
     interface OnyxStack {
         /**
@@ -215,6 +221,12 @@ declare global {
         prototype: HTMLOnyxCalloutElement;
         new (): HTMLOnyxCalloutElement;
     };
+    interface HTMLOnyxCardElement extends Components.OnyxCard, HTMLStencilElement {
+    }
+    var HTMLOnyxCardElement: {
+        prototype: HTMLOnyxCardElement;
+        new (): HTMLOnyxCardElement;
+    };
     interface HTMLOnyxCheckboxElement extends Components.OnyxCheckbox, HTMLStencilElement {
     }
     var HTMLOnyxCheckboxElement: {
@@ -263,6 +275,12 @@ declare global {
         prototype: HTMLOnyxRadioGroupElement;
         new (): HTMLOnyxRadioGroupElement;
     };
+    interface HTMLOnyxSeparatorElement extends Components.OnyxSeparator, HTMLStencilElement {
+    }
+    var HTMLOnyxSeparatorElement: {
+        prototype: HTMLOnyxSeparatorElement;
+        new (): HTMLOnyxSeparatorElement;
+    };
     interface HTMLOnyxStackElement extends Components.OnyxStack, HTMLStencilElement {
     }
     var HTMLOnyxStackElement: {
@@ -281,6 +299,7 @@ declare global {
         "onyx-box": HTMLOnyxBoxElement;
         "onyx-button": HTMLOnyxButtonElement;
         "onyx-callout": HTMLOnyxCalloutElement;
+        "onyx-card": HTMLOnyxCardElement;
         "onyx-checkbox": HTMLOnyxCheckboxElement;
         "onyx-checkbox-group": HTMLOnyxCheckboxGroupElement;
         "onyx-header": HTMLOnyxHeaderElement;
@@ -289,6 +308,7 @@ declare global {
         "onyx-list-item": HTMLOnyxListItemElement;
         "onyx-radio": HTMLOnyxRadioElement;
         "onyx-radio-group": HTMLOnyxRadioGroupElement;
+        "onyx-separator": HTMLOnyxSeparatorElement;
         "onyx-stack": HTMLOnyxStackElement;
     }
 }
@@ -325,6 +345,7 @@ declare namespace LocalJSX {
         "border"?: string;
         "borderRadius"?: string;
         "display"?: "flex" | "grid" | "none" | "block" | "inline-block" | "inline-flex";
+        "flexDirection"?: "row" | "column";
         "gap"?: string;
         "height"?: string;
         "justifyContent"?: "center" | "flex-start" | "flex-end" | "space-around" | "space-between" | "space-evenly";
@@ -342,6 +363,8 @@ declare namespace LocalJSX {
         "actionType"?: string;
         "header"?: string;
         "type"?: 'neutral' | 'success' | 'error' | 'warning';
+    }
+    interface OnyxCard {
     }
     interface OnyxCheckbox {
         /**
@@ -416,6 +439,9 @@ declare namespace LocalJSX {
          */
         "selectedValue"?: any;
     }
+    interface OnyxSeparator {
+        "horizontalPadding"?: number;
+    }
     interface OnyxStack {
         /**
           * The `gap` property sets the spacing in between elements, and has no effect in the leading or trailing element.
@@ -438,6 +464,7 @@ declare namespace LocalJSX {
         "onyx-box": OnyxBox;
         "onyx-button": OnyxButton;
         "onyx-callout": OnyxCallout;
+        "onyx-card": OnyxCard;
         "onyx-checkbox": OnyxCheckbox;
         "onyx-checkbox-group": OnyxCheckboxGroup;
         "onyx-header": OnyxHeader;
@@ -446,6 +473,7 @@ declare namespace LocalJSX {
         "onyx-list-item": OnyxListItem;
         "onyx-radio": OnyxRadio;
         "onyx-radio-group": OnyxRadioGroup;
+        "onyx-separator": OnyxSeparator;
         "onyx-stack": OnyxStack;
     }
 }
@@ -464,6 +492,7 @@ declare module "@stencil/core" {
             "onyx-box": LocalJSX.OnyxBox & JSXBase.HTMLAttributes<HTMLOnyxBoxElement>;
             "onyx-button": LocalJSX.OnyxButton & JSXBase.HTMLAttributes<HTMLOnyxButtonElement>;
             "onyx-callout": LocalJSX.OnyxCallout & JSXBase.HTMLAttributes<HTMLOnyxCalloutElement>;
+            "onyx-card": LocalJSX.OnyxCard & JSXBase.HTMLAttributes<HTMLOnyxCardElement>;
             "onyx-checkbox": LocalJSX.OnyxCheckbox & JSXBase.HTMLAttributes<HTMLOnyxCheckboxElement>;
             "onyx-checkbox-group": LocalJSX.OnyxCheckboxGroup & JSXBase.HTMLAttributes<HTMLOnyxCheckboxGroupElement>;
             "onyx-header": LocalJSX.OnyxHeader & JSXBase.HTMLAttributes<HTMLOnyxHeaderElement>;
@@ -472,6 +501,7 @@ declare module "@stencil/core" {
             "onyx-list-item": LocalJSX.OnyxListItem & JSXBase.HTMLAttributes<HTMLOnyxListItemElement>;
             "onyx-radio": LocalJSX.OnyxRadio & JSXBase.HTMLAttributes<HTMLOnyxRadioElement>;
             "onyx-radio-group": LocalJSX.OnyxRadioGroup & JSXBase.HTMLAttributes<HTMLOnyxRadioGroupElement>;
+            "onyx-separator": LocalJSX.OnyxSeparator & JSXBase.HTMLAttributes<HTMLOnyxSeparatorElement>;
             "onyx-stack": LocalJSX.OnyxStack & JSXBase.HTMLAttributes<HTMLOnyxStackElement>;
         }
     }

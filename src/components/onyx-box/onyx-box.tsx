@@ -9,11 +9,11 @@ export class OnyxBox {
 
   /* Specifies the height of Box container */
   @Prop({reflect: true})
-  height = "0px";
+  height = "fit-content";
 
   /* Specifies the width of Box container */
   @Prop({reflect: true})
-  width = "0px";
+  width = "fit-content";
 
   /* Specifies the background colour of Box container */
   @Prop({reflect: true})
@@ -37,7 +37,11 @@ export class OnyxBox {
 
   /* Specify Box container display */
   @Prop({reflect: true})
-  display: "flex" | "grid" | "none" | "block" | "inline-block" | "inline-flex" = "inline-block";
+  display: "flex" | "grid" | "none" | "block" | "inline-block" | "inline-flex" = "flex";
+
+  /* Specify container flow */
+  @Prop({reflect: true})
+  flexDirection: "row" | "column" = "column";
 
   /* Specify how items should be aligned in Box container */
   @Prop({reflect: true})
@@ -75,6 +79,7 @@ export class OnyxBox {
       justify-content: ${this.justifyContent};
       background-color: ${this.backgroundColor};
       gap: ${this.gap};
+      flex-direction: ${this.flexDirection};
       box-sizing: border-box;
     `;
 

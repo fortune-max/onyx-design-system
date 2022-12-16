@@ -25,6 +25,6 @@ export const CalloutStory = Template.bind({});
 CalloutStory.args = {
   type: 'neutral',
   header: 'Informal Callout',
-  content: 'This is an infromal callout, for more information click the callout action button',
+  content: 'This is an informal callout, for more information click the callout action button',
   actionTitle: 'Action',
 };

@@ -15,13 +15,14 @@
 | `backgroundColor` | `background-color` |             | `string`                                                                                        | `"none"`            |
 | `border`          | `border`           |             | `string`                                                                                        | `"0px solid black"` |
 | `borderRadius`    | `border-radius`    |             | `string`                                                                                        | `"0px"`             |
-| `display`         | `display`          |             | `"block" \| "flex" \| "grid" \| "inline-block" \| "inline-flex" \| "none"`                      | `"inline-block"`    |
+| `display`         | `display`          |             | `"block" \| "flex" \| "grid" \| "inline-block" \| "inline-flex" \| "none"`                      | `"flex"`            |
+| `flexDirection`   | `flex-direction`   |             | `"column" \| "row"`                                                                             | `"column"`          |
 | `gap`             | `gap`              |             | `string`                                                                                        | `"0px"`             |
-| `height`          | `height`           |             | `string`                                                                                        | `"0px"`             |
+| `height`          | `height`           |             | `string`                                                                                        | `"fit-content"`     |
 | `justifyContent`  | `justify-content`  |             | `"center" \| "flex-end" \| "flex-start" \| "space-around" \| "space-between" \| "space-evenly"` | `"center"`          |
 | `margin`          | `margin`           |             | `string`                                                                                        | `"0px"`             |
 | `padding`         | `padding`          |             | `string`                                                                                        | `"0px"`             |
-| `width`           | `width`            |             | `string`                                                                                        | `"0px"`             |
+| `width`           | `width`            |             | `string`                                                                                        | `"fit-content"`     |
 
 
 ----------------------------------------------
