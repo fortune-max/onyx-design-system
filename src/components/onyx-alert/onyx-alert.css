@@ -11,6 +11,15 @@
   align-items: center;
 }
 
+.content {
+  display: flex;
+}
+
+.icon {
+  display: inline-block;
+  margin-right: 8px !important;
+}
+
 h4 {
   margin: 0;
 }
@@ -23,10 +32,22 @@ h4 {
   background-color: #f8eaea;
 }
 
+.container.error .content .icon svg path {
+  fill: #bd3131 !important;
+}
+
 .container.success {
   background-color: #ecfbe9;
 }
 
+.container.success .icon path {
+  fill: #309417 !important;
+}
+
 .container.warning {
   background-color: #fdf6ec;
+}
+
+.container.warning .icon path {
+  fill: #e9a643 !important;
 }
